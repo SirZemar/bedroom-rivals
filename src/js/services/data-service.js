@@ -1,0 +1,28 @@
+import $ from 'jquery';
+import { pokemonData } from "../pokemon-data";
+import { Pokemon } from "../classes/pokemon";
+import { PokemonCard } from "../ui/pokemon-card";
+import Keyframes from '@keyframes/core';
+import { Animations } from '../animations/animations';
+
+export class DataService {
+
+    constructor() {
+        this.pokedexArray = [];
+    }
+
+    getPokedexArray() {
+        return this.pokedexArray;
+    }
+
+    createPokedexArray() {
+        for (let pokemon of pokemonData) {
+            pokemon = new Pokemon(pokemon.name, pokemon.id, pokemon.type, pokemon.power, pokemon.accuracy, pokemon.hp)
+            this.pokedexArray.push(pokemon);
+        }
+
+    }
+
+
+}
+
