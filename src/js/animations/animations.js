@@ -14,9 +14,9 @@ Keyframes.define([{
     '100%': { bottom: "-50vh" }
 }, {
     name: 'gridStretch',
-    '0%': {  backgroundSize: "30px 30px" },
+    '0%': { backgroundSize: "30px 30px" },
     '50%': { backgroundSize: "30px 170px" },
-    '100%': {  backgroundSize: "30px 30px"}
+    '100%': { backgroundSize: "30px 30px" }
 }, {
     name: 'gridLoop',
     '0%': { transform: "translateX(-50%) rotateX(-115deg) translateY(-100px)" },
@@ -33,3 +33,11 @@ Keyframes.define([{
     '100%': { transform: "translate(0)" }
 }])
 
+
+// Arena 
+
+keyframes.define([{
+    name: 'speedTransition',
+    '0%': { width: '0%' },
+    '100%': { width: '100%' }
+}])

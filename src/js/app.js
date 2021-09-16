@@ -39,8 +39,15 @@ export function arenaLoad() {
 
         arena.itemBag();
 
-        arena.currentHealthOne()
+        const playerOne = 'player-one';
+        const playerTwo = 'player-two';
+
+        arena.entryStatus(playerOne);
+        arena.entryStatus(playerTwo);
+
+        arena.currentSpeed(playerOne);
+        arena.currentSpeed(playerTwo);
 
         //attack simulation (temp)
-        setTimeout(() => {arena.currentHealthOne(2900)}, 5000)
+        // setTimeout(() => {arena.currentHealth('player-two',1000)}, 5000)
 }

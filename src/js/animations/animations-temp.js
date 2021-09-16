@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $, { speed } from 'jquery';
 import keyframes from '@keyframes/core';
 import { Anima } from './animations';
 
@@ -79,5 +79,13 @@ export class Animations {
 
     }
 
-    
+    static speedBar(speedBar, speed) {
+
+        speedBar.play({
+            name: 'speedTransition',
+            duration: `${speed}ms`,
+            timingFunction: 'linear'
+        })
+
+    }
 }

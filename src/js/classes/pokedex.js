@@ -3,8 +3,8 @@ import { Pokemon } from './pokemon';
 import { PokemonCard } from "../ui/pokemon-card";
 import Keyframes from '@keyframes/core';
 import { Anima } from '../animations/animations';
-import { arenaLoad } from '../app';
 import { Animations } from '../animations/animations-temp';
+import { arenaLoad } from '../app';
 
 export class Pokedex {
 
@@ -57,7 +57,7 @@ export class Pokedex {
             const pokemonName = pokedexCard.querySelector('.pokedex__list__card__name').innerHTML;
             const selectedPokemon = this.pokedexArray.filter(pokemon => pokemon.name === pokemonName)[0];
 
-            const pokemonCard = new PokemonCard(new Pokemon(selectedPokemon.name, selectedPokemon.id, selectedPokemon.type, selectedPokemon.power, selectedPokemon.accuracy, selectedPokemon.hp));
+            const pokemonCard = new PokemonCard(selectedPokemon);
 
             pokemonCard.appendToElement($('.pokedex__team-list'), 'pokedex__team-list');
 
@@ -80,6 +80,8 @@ export class Pokedex {
             // Add event clicker to selected card to be removed if wished
             this.eventListeners(pokemonCard, pokedexCard);
 
+            console.log(selectedPokemon)
+            console.log(pokemonCard)
         }
     }
 

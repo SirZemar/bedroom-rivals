@@ -1,6 +1,7 @@
 import $ from 'jquery';
-import { keyframes } from '@keyframes/core';
-import { Animations } from '../animations/animations';
+import Keyframes from '@keyframes/core';
+import { Anima } from '../animations/animations';
+import { Animations } from '../animations/animations-temp';
 import { Pokedex } from './pokedex';
 import { PokemonCard } from '../ui/pokemon-card';
 import { Pokemon } from './pokemon';
@@ -28,6 +29,7 @@ export class Arena {
         this.playerTwoArray.forEach((pokemon) => {
             this.teamTwo.push(pokemon.pokemon);
         });
+
     }
 
     maxHealth() {
@@ -111,22 +113,102 @@ export class Arena {
         $('#bench-player-two').append(imageEl);
     }
 
-    currentHealthOne(damage) {
-        const name = this.captainOneTeam.name
+    entryStatus(player) {
 
-        // Set up health at start
-        $('#hp-player-one').html(`${this.captainOneTeam.hp}/${this.teamOneMaxHp[name]}`);
+        let currentHealth = null;
+        let maxHealth = null;
 
-        // If attacked current health change
-        if (damage) {
-            this.captainOneTeam.hp = this.captainOneTeam.hp - damage;
-            
-            const percentage = (this.captainOneTeam.hp * 100) / this.teamOneMaxHp[name];
-            
-            $('#hp-player-one').css('width', `${percentage}%`);
+        // Set up stats at start
+        switch (currentHealth, maxHealth, player) {
+            case 'player-one':
+                // Set up health
+                currentHealth = Math.ceil(this.captainOneTeam.hp);
+                maxHealth = Math.ceil(this.teamOneMaxHp[this.captainOneTeam.name]);
 
-            $('#hp-player-one').html(`${this.captainOneTeam.hp}/${this.teamOneMaxHp[name]}`);
+                $('#hp-player-one').html(`${currentHealth}/${maxHealth}`);
 
+                // Set up speed
+                $('#sp-player-one').css('width', 0);
+
+                break;
+            case 'player-two':
+                // Set up health
+                currentHealth = Math.ceil(this.captainTwoTeam.hp);
+                maxHealth = Math.ceil(this.teamTwoMaxHp[this.captainTwoTeam.name]);
+
+                $('#hp-player-two').html(`${currentHealth}/${maxHealth}`);
+
+                // Set up speed
+                $('#sp-player-two').css('width', 0);
+                break;
+        }
+    }
+
+
+    currentHealth(attackant, damage) {
+
+        switch (attackant) {
+            case 'player-two':
+
+                const name = this.captainOneTeam.name
+
+                // If attacked current health change
+                if (damage) {
+
+                    const currentHealth = (this.captainOneTeam.hp) - damage;
+                    this.captainOneTeam.hp = currentHealth
+                    const maxHealth = Math.ceil(this.teamOneMaxHp[this.captainOneTeam.name]);
+
+                    const percentage = (currentHealth * 100) / maxHealth;
+
+                    $('#hp-player-one').css('width', `${percentage}%`);
+
+                    $('#hp-player-one').html(`${currentHealth}/${maxHealth}`);
+                }
+                break;
+            case 'player-one':
+                break;
+
+        }
+    }
+
+    currentSpeed(player) {
+
+        let currentSpeedMs = null;
+        let speedBarAnimation = null;
+
+        switch (currentSpeedMs, player) {
+            case 'player-one':
+
+                console.log(this.captainOneTeam.speed)
+
+                currentSpeedMs = (45 - 0.12 * this.captainOneTeam.speed) * 100;
+                console.log(currentSpeedMs)
+
+                speedBarAnimation = new Keyframes(document.getElementById('sp-player-one'));
+
+                setInterval(() => {
+                    Animations.speedBar(speedBarAnimation, currentSpeedMs);
+                }, currentSpeedMs);
+                break;
+            case 'player-two':
+
+                currentSpeedMs = (45 - 0.12 * this.captainTwoTeam.speed) * 100;
+                console.log(currentSpeedMs)
+
+                speedBarAnimation = new Keyframes(document.getElementById('sp-player-two'));
+
+                //BUG!!!!!!!! Try with promises
+                setInterval(() => {
+                    Animations.speedBar(speedBarAnimation, currentSpeedMs);
+                    setInterval(() => {
+                        this.currentHealth('player-two', 200);                        
+                    }, currentSpeedMs);
+                }, currentSpeedMs);
+
+                const promise = doSomething();
+                console.group(promise)
+                break;
         }
     }
 
