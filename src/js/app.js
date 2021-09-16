@@ -27,12 +27,20 @@ export function arenaLoad() {
         const arena = new Arena(playerOneTeam, playerTwoTeam);
 
 
+        arena.setPokemons();
+        arena.maxHealth();
+
         arena.benchTeamOne();
         arena.benchTeamTwo();
 
+        arena.setActive();
         arena.pokemonActiveOne();
         arena.pokemonActiveTwo();
 
         arena.itemBag();
 
+        arena.currentHealthOne()
+
+        //attack simulation (temp)
+        setTimeout(() => {arena.currentHealthOne(2900)}, 5000)
 }
