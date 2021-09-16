@@ -91,26 +91,15 @@
         "a d e" 25%
         "a f g" 40% / 35% 50% 15%;
     height: 100%;
-}
-
-.combat__player-one {
-    flex-basis: 50%;
     width: 100%;
-}
-
-.combat__player-two {
     flex-basis: 50%;
-    width: 100%;
-    transform: rotateY(180deg) rotateX(180deg);
 }
 
-.combat__player-two>* {
+.arena__combat.rotation-x-y>* {
     transform: rotateY(180deg) rotateX(180deg)
 }
 
-.reverse-rotation-x-y {
-    transform: none;
-}
+
 
 .arena__combat__image {
     grid-area: a;
@@ -128,6 +117,7 @@
     color: white;
     font-weight: bold;
     font-size: 1.5rem;
+    line-height: 27px;
 }
 
 .progress {
@@ -146,6 +136,10 @@
     /* height: 100%; */
     border-radius: 5px 5px 0 0;
     margin-top: 5px;
+}
+
+#hp-player-two {
+    transform: rotateX(180deg) rotateY(180deg);
 }
 
 .speed {

@@ -110,6 +110,14 @@ textarea {
     max-width: 100%;
   }
 
+  .rotation-x-y {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+
+  .reverse-rotation {
+    transform: none !important;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
