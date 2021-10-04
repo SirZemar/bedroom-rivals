@@ -18,6 +18,13 @@ export class Arena {
         this.teamTwo = [];
         this.teamOneMaxHp = {};
         this.teamTwoMaxHp = {};
+        this.speedBarAnimationOne = null;
+        this.speedBarAnimationTwo = null;
+
+        this.timeOutOne = false;
+        this.timeOutTwo = false;
+        this.dateOne = null;
+        this.dateTwo = null;
 
     }
 
@@ -47,7 +54,6 @@ export class Arena {
     }
 
     benchTeamOne() {
-
         this.playerOneArray.forEach((pokemonArr) => {
             if (!pokemonArr.pokemon.captain === true) {
                 pokemonArr.appendToElement($('#bench-player-one'), 'arena__main__bench-list');
@@ -150,13 +156,12 @@ export class Arena {
         switch (attackant) {
             case 'player-two':
 
-                const name = this.captainOneTeam.name
-
                 // If attacked current health change
                 if (damage) {
 
                     const currentHealth = (this.captainOneTeam.hp) - damage;
                     this.captainOneTeam.hp = currentHealth
+
                     const maxHealth = Math.ceil(this.teamOneMaxHp[this.captainOneTeam.name]);
 
                     const percentage = (currentHealth * 100) / maxHealth;
@@ -167,51 +172,161 @@ export class Arena {
                 }
                 break;
             case 'player-one':
+
+                if (damage) {
+
+                    const currentHealth = (this.captainTwoTeam.hp) - damage;
+                    this.captainTwoTeam.hp = currentHealth
+
+                    const maxHealth = Math.ceil(this.teamTwoMaxHp[this.captainTwoTeam.name]);
+
+                    const percentage = (currentHealth * 100) / maxHealth;
+
+                    $('#hp-player-two').css('width', `${percentage}%`);
+
+                    $('#hp-player-two').html(`${currentHealth}/${maxHealth}`);
+                }
                 break;
 
         }
+    }
+
+    timeOutButton() { //needs refactor
+
+        $('#time-out-one').on('click', (event) => {
+
+            if (!this.timeOutOne) {
+
+                this.speedBarAnimationOne.queue({}, {
+                    onEnd: () => {
+                        this.dateOne = Date.now();
+                        this.speedBarAnimationTwo.pause();
+                    }
+                });
+
+                this.timeOutOne = true;
+
+            } else {
+
+                this.speedBarAnimationOne.reset()
+                this.currentSpeed('player-one');
+
+                this.speedBarAnimationTwo.resume();
+
+                // attack if nothing change (temp)
+                this.currentHealth('player-one', 200);
+
+                this.timeOutOne = false;
+            }
+        })
+
+        $('#time-out-two').on('click', (event) => {
+
+            if (!this.timeOutTwo) {
+
+                this.speedBarAnimationTwo.queue({}, {
+                    onEnd: () => {
+                        this.dateTwo = Date.now();
+                        this.speedBarAnimationOne.pause();
+                    }
+                });
+
+                this.timeOutTwo = true;
+
+            } else {
+
+                this.speedBarAnimationTwo.reset()
+                this.currentSpeed('player-two');
+
+                this.speedBarAnimationOne.resume();
+
+                // attack if nothing change (temp)
+                this.currentHealth('player-one', 200);
+
+                this.timeOutTwo = false;
+            }
+        })
+    }
+
+    simultaneousAtkCheck() {
+
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(this.dateOne - this.dateTwo);
+            }, 10)
+        });
+
     }
 
     currentSpeed(player) {
 
         let currentSpeedMs = null;
-        let speedBarAnimation = null;
 
         switch (currentSpeedMs, player) {
             case 'player-one':
 
-                console.log(this.captainOneTeam.speed)
-
                 currentSpeedMs = (45 - 0.12 * this.captainOneTeam.speed) * 100;
-                console.log(currentSpeedMs)
 
-                speedBarAnimation = new Keyframes(document.getElementById('sp-player-one'));
+                // Speed bar animation with call of function to change current health after attack
 
-                setInterval(() => {
-                    Animations.speedBar(speedBarAnimation, currentSpeedMs);
-                }, currentSpeedMs);
+                this.speedBarAnimationOne = new Keyframes(document.getElementById('sp-player-one'));
+
+                this.speedBarAnimationOne.loop({
+                    name: 'speedTransition',
+                    duration: `${currentSpeedMs}ms`,
+                    timingFunction: 'linear'
+                }, {
+                    onEnd: () => {
+
+
+                        // Exception to a simultaneous turn, time-out activated
+                        if (this.timeOutOne || this.timeOutTwo) {
+
+                            this.dateOne = Date.now();
+
+                            if (this.simultaneousAtkCheck().then((value) => { value < 5 })) { // Less than 5ms
+                                setTimeout(() => {
+                                    this.speedBarAnimationOne.pause();
+                                }, 10)
+                            };
+                        }
+
+                        return this.currentHealth(player, 200);
+                    }
+                })
                 break;
             case 'player-two':
 
                 currentSpeedMs = (45 - 0.12 * this.captainTwoTeam.speed) * 100;
-                console.log(currentSpeedMs)
 
-                speedBarAnimation = new Keyframes(document.getElementById('sp-player-two'));
+                // Speed bar animation with call of function to change current health after attack
 
-                //BUG!!!!!!!! Try with promises
-                setInterval(() => {
-                    Animations.speedBar(speedBarAnimation, currentSpeedMs);
-                    setInterval(() => {
-                        this.currentHealth('player-two', 200);                        
-                    }, currentSpeedMs);
-                }, currentSpeedMs);
+                this.speedBarAnimationTwo = new Keyframes(document.getElementById('sp-player-two'));
 
-                const promise = doSomething();
-                console.group(promise)
+                this.speedBarAnimationTwo.loop({
+                    name: 'speedTransition',
+                    duration: `${currentSpeedMs}ms`,
+                    timingFunction: 'linear'
+                }, {
+                    onEnd: () => {
+
+                        // Exception to a simultaneous turn, time-out activated
+                        if (this.timeOutOne || this.timeOutTwo) {
+
+                            this.dateTwo = Date.now();
+
+                            if (this.simultaneousAtkCheck().then((value) => { value < 5 })) { // Less than 5ms
+                                setTimeout(() => {
+                                    this.speedBarAnimationTwo.pause();
+                                }, 10)
+                            };
+                        }
+
+                        return this.currentHealth(player, 200);
+                    }
+                })
                 break;
         }
     }
-
-
 
 }
