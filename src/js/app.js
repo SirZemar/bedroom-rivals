@@ -48,6 +48,8 @@ export function arenaLoad() {
         arena.currentSpeed(playerOne);
         arena.currentSpeed(playerTwo);
 
+        arena.timeOutButton();
+
         //attack simulation (temp)
         // setTimeout(() => {arena.currentHealth('player-two',1000)}, 5000)
 }

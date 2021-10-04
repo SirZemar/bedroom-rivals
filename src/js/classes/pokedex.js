@@ -80,8 +80,6 @@ export class Pokedex {
             // Add event clicker to selected card to be removed if wished
             this.eventListeners(pokemonCard, pokedexCard);
 
-            console.log(selectedPokemon)
-            console.log(pokemonCard)
         }
     }
 

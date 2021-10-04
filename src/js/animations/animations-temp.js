@@ -1,6 +1,7 @@
 import $, { speed } from 'jquery';
 import keyframes from '@keyframes/core';
 import { Anima } from './animations';
+import { Arena } from '../classes/arena';
 
 export class Animations {
     constructor(){
@@ -79,13 +80,6 @@ export class Animations {
 
     }
 
-    static speedBar(speedBar, speed) {
 
-        speedBar.play({
-            name: 'speedTransition',
-            duration: `${speed}ms`,
-            timingFunction: 'linear'
-        })
-
-    }
+    
 }
