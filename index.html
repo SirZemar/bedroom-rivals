@@ -16,7 +16,8 @@
   <link rel="shortcut icon" href="icon.png">
 
   <link rel="stylesheet" href="./src/css/normalize.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./src/css/main.css">
 
   <link rel="stylesheet" href="./src/css/types.css">
@@ -29,7 +30,7 @@
 </head>
 
 <body>
-  <section class="game">
+  <section class="game hidden">
     <div class="grid"></div>
     <div class="arena">
       <!-- arena__header -->
@@ -48,19 +49,24 @@
               <p class="arena__combat__name" id="captain-name-one">Digtrio</p>
               <div class="arena__combat__hp-sp-bar">
                 <div class="progress hp">
-                  <div id="hp-player-one" class="hp-bar progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                  <div id="hp-player-one" class="hp-bar progress-bar bg-success" role="progressbar" style="width: 100%"
+                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
                     3000/3000
                   </div>
                 </div>
                 <div class="progress speed">
-                  <div id="sp-player-one" class="speed-bar progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div id="sp-player-one" class="speed-bar progress-bar bg-warning" role="progressbar"
+                    style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
               <div class="arena__combat__special-bar">
                 <div class="arena__combat__special-bar__progress progress">
-                  <div class="arena__combat__special-bar__progress__one progress-bar" role="progressbar" style="width: 33.3%" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="33.3"></div>
-                  <div class="arena__combat__special-bar__progress__two progress-bar" role="progressbar" style="width: 33.3%" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="33.3"></div>
-                  <div class="arena__combat__special-bar__progress__three progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="33.3"></div>
+                  <div class="arena__combat__special-bar__progress__one progress-bar" role="progressbar"
+                    style="width: 33.3%" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="33.3"></div>
+                  <div class="arena__combat__special-bar__progress__two progress-bar" role="progressbar"
+                    style="width: 33.3%" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="33.3"></div>
+                  <div class="arena__combat__special-bar__progress__three progress-bar" role="progressbar"
+                    style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="33.3"></div>
                 </div>
               </div>
               <button class="arena__combat__special-button">Special</button>
@@ -72,27 +78,30 @@
               <p class="arena__combat__name" id="captain-name-two">Arbok</p>
               <div class="arena__combat__hp-sp-bar reverse-rotation">
                 <div class="progress hp">
-                  <div id="hp-player-two" class="hp-bar progress-bar bg-success rotation-x-y" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                  <div id="hp-player-two" class="hp-bar progress-bar bg-success rotation-x-y" role="progressbar"
+                    style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
                     3000/3000
                   </div>
                 </div>
                 <div class="progress speed">
-                  <div id="sp-player-two" class="speed-bar progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div id="sp-player-two" class="speed-bar progress-bar bg-warning" role="progressbar"
+                    style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
               <div class="arena__combat__special-bar reverse-rotation">
                 <div class="arena__combat__special-bar__progress progress">
-                  <div class="arena__combat__special-bar__progress__one progress-bar" role="progressbar" style="width: 33.3%" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="33.3"></div>
-                  <div class="arena__combat__special-bar__progress__two progress-bar" role="progressbar" style="width: 33.3%" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="33.3"></div>
-                  <div class="arena__combat__special-bar__progress__three progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="33.3"></div>
+                  <div class="arena__combat__special-bar__progress__one progress-bar" role="progressbar"
+                    style="width: 33.3%" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="33.3"></div>
+                  <div class="arena__combat__special-bar__progress__two progress-bar" role="progressbar"
+                    style="width: 33.3%" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="33.3"></div>
+                  <div class="arena__combat__special-bar__progress__three progress-bar" role="progressbar"
+                    style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="33.3"></div>
                 </div>
               </div>
               <button class="arena__combat__special-button">Special</button>
               <button id="time-out-two" class="arena__combat__time-button">Time-out</button>
 
             </div>
-
-            <button id='teste'>AQUI</button>
           </div>
 
           <div class="arena__main__bench">
@@ -102,72 +111,76 @@
         </div>
       </div>
     </div>
-  
-  <section class="pokedex">
-    <div class="pokedex-container">
-      <header class="pokedex__header">
-        <div class="pokedex__header__cover">
-          <svg>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="2" />
-              <feComposite in2="SourceGraphic" operator="out" result="glow" />
-              <feFlood flood-color="white" flood-opacity="0.2" />
-              <feComposite in2="SourceGraphic" operator="atop" result="light" />
-              <feComposite in="glow" in2="light" />
-            </filter>
-            <pattern id="p" patternUnits="userSpaceOnUse" width="180px" height="120px"
-              patternTransform="scale(1,0.8660254)">
-              <g filter="url(#glow)">
-                <g class="wrapper">
-                  <path id="hex" pathLength="388.5" d="M-30,-60 30,-60 60,0
+
+    <section class="pokedex">
+      <div class="pokedex-container">
+        <header class="pokedex__header">
+          <div class="pokedex__header__cover">
+            <svg>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="2" />
+                <feComposite in2="SourceGraphic" operator="out" result="glow" />
+                <feFlood flood-color="white" flood-opacity="0.2" />
+                <feComposite in2="SourceGraphic" operator="atop" result="light" />
+                <feComposite in="glow" in2="light" />
+              </filter>
+              <pattern id="p" patternUnits="userSpaceOnUse" width="180px" height="120px"
+                patternTransform="scale(1,0.8660254)">
+                <g filter="url(#glow)">
+                  <g class="wrapper">
+                    <path id="hex" pathLength="388.5" d="M-30,-60 30,-60 60,0
                                  30,60 -30,60 -60,0Z" transform="scale(0.935)" />
+                  </g>
+                  <use xlink:href="#hex" x="0" y="+120" />
+                  <use xlink:href="#hex" x="+90" y="+60" />
+                  <use xlink:href="#hex" x="+180" y="0" />
+                  <use xlink:href="#hex" x="+180" y="120" />
                 </g>
-                <use xlink:href="#hex" x="0" y="+120" />
-                <use xlink:href="#hex" x="+90" y="+60" />
-                <use xlink:href="#hex" x="+180" y="0" />
-                <use xlink:href="#hex" x="+180" y="120" />
-              </g>
-            </pattern>
-            <rect fill="url(#p)" width="100%" height="100%" />
-          </svg>
-          <h1 class="title">
-            <span>POKEDEX</span>
-            <span>POKEDEX</span>
-          </h1>
-        </div>
-        <div class="pokedex__header__nav">
-          <div class="pokedex__header__nav-container">
-            <h1 class="pokedex__header__nav__text">Player 1</h1>
-            <button class="pokedex__header__nav__button" id="next-bt">
-              Next
-            </button>
+              </pattern>
+              <rect fill="url(#p)" width="100%" height="100%" />
+            </svg>
+            <h1 class="title">
+              <span>POKEDEX</span>
+              <span>POKEDEX</span>
+            </h1>
           </div>
-        </div>
-      </header>
-      <main class="pokedex-main">
-        <div class="pokedex__list-container">
-          <ul class="pokedex__list">
-            <!-- ui pokemon-card -->
-          </ul>
-        </div>
-        <div class="pokedex__team-list-container">
-          <ul class="pokedex__team-list">
+          <div class="pokedex__header__nav">
+            <div class="pokedex__header__nav-container">
+              <h1 class="pokedex__header__nav__text">Player 1</h1>
+              <button class="pokedex__header__nav__button" id="next-bt">
+                Next
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="pokedex-main">
+          <div class="pokedex__list-container">
+            <ul class="pokedex__list">
+              <!-- ui pokemon-card -->
+            </ul>
+          </div>
+          <div class="pokedex__team-list-container">
+            <ul class="pokedex__team-list">
 
-          </ul>
-        </div>
-      </main>
+            </ul>
+          </div>
+        </main>
 
-      </ul>
-    </div>
+        </ul>
+      </div>
+    </section>
   </section>
-</section>
 
   <script src="./src/js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="./src/js/plugins.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
   <script src="//cdn.jsdelivr.net/npm/less@4.1.1"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
   <script src="./src/js/main.js"></script>
   <script src="./src/js/app.js"></script>
@@ -175,6 +188,13 @@
     System.import('./src/js/app.js');
   </script>
 
+  <script>
+    // Wait for window load
+    $(window).on('load',  () => {
+      // Animate loader off screen
+      $(".game").removeClass('hidden')
+    });
+  </script>
 
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
