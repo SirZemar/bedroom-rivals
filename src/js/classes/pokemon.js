@@ -4,7 +4,7 @@ export class Pokemon {
         this.name = name;
         this.id = id;
         this.type = type;
-        this.hp = hp * 20;
+        this.hp = hp;
         this.attack = attack;
         this.attackSpecial = attackSpecial;
         this.accuracy = accuracy;

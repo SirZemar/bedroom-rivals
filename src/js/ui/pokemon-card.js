@@ -25,6 +25,8 @@ export class PokemonCard extends BaseElement {
   }
   
   getTypeImg() {
+
+    // If there is more than one type
     if (this.pokemon.type instanceof Array) {
 
       const pokemonType1 = pokemonTypes.filter(type => type.includes(this.pokemon.type[0]))
@@ -38,6 +40,7 @@ export class PokemonCard extends BaseElement {
                   </div>`
     } else {
 
+      // Single type
       const pokemonType = pokemonTypes.filter(type => type.includes(this.pokemon.type))
 
       return `<div class="pokemon-icon ${this.pokemon.type}" title="${this.pokemon.type.charAt(0).toUpperCase() + this.pokemon.type.slice(1)}">

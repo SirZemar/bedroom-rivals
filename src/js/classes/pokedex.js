@@ -56,8 +56,10 @@ export class Pokedex {
             //Find pokemon selected and create new card for selected pokemon
             const pokemonName = pokedexCard.querySelector('.pokedex__list__card__name').innerHTML;
             const selectedPokemon = this.pokedexArray.filter(pokemon => pokemon.name === pokemonName)[0];
+            
+            const newSelectedPokemon = new Pokemon(selectedPokemon.name, selectedPokemon.id, selectedPokemon.type, selectedPokemon.hp * 20, selectedPokemon.attack, selectedPokemon.attackSpecial, selectedPokemon.accuracy, selectedPokemon.speed);
 
-            const pokemonCard = new PokemonCard(selectedPokemon);
+            const pokemonCard = new PokemonCard(newSelectedPokemon);
 
             pokemonCard.appendToElement($('.pokedex__team-list'), 'pokedex__team-list');
 
