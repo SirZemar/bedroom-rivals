@@ -204,6 +204,9 @@ export class Arena {
                     }
                 });
 
+                // css style
+                $(event.target).addClass('selected');
+
                 this.timeOutOne = true;
 
             } else {
@@ -215,6 +218,9 @@ export class Arena {
 
                 // attack if nothing change (temp)
                 this.currentHealth('player-one', 200);
+
+                // css style
+                $(event.target).removeClass('selected');
 
                 this.timeOutOne = false;
             }
@@ -231,6 +237,9 @@ export class Arena {
                     }
                 });
 
+                // css style
+                $(event.target).addClass('selected');
+
                 this.timeOutTwo = true;
 
             } else {
@@ -243,6 +252,9 @@ export class Arena {
                 // attack if nothing change (temp)
                 this.currentHealth('player-one', 200);
 
+                // css style
+                $(event.target).removeClass('selected');
+                
                 this.timeOutTwo = false;
             }
         })
