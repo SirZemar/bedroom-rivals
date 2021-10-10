@@ -153,1359 +153,1359 @@ export let pokemonData = [
         name: 'Pidgey',
         id: '016',
         type: ['normal','flying'],
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 56
     },
     {
         name: 'Pidgeotto',
         id: '017',
         type: ['normal','flying'],
-        hp: null,
+        hp: 63,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 71
     },
     {
         name: 'Pidgeot',
         id: '018',
         type: ['normal','flying'],
-        hp: null,
+        hp: 83,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 101
     },
     {
         name: 'Rattata',
         id: '019',
         type: 'normal',
-        hp: null,
+        hp: 30,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 72
     },
     {
         name: 'Raticate',
         id: '020',
         type: 'normal',
-        hp: null,
+        hp: 55,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 97
     },
     {
         name: 'Spearow',
         id: '021',
         type: ['normal','flying'],
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 70
     },
     {
         name: 'Fearow',
         id: '022',
         type: ['normal','flying'],
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 100
     },
     {
         name: 'Ekans',
         id: '023',
         type: 'poison',
-        hp: null,
+        hp: 35,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 55
     },
     {
         name: 'Arbok',
         id: '024',
         type: 'poison',
-        hp: 2700,
-        attack: 62,
+        hp: 60,
+        attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 80
     },
     {
         name: 'Pikachu',
         id: '025',
         type: 'electric',
-        hp: null,
+        hp: 35,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 90
     },
     {
         name: 'Raichu',
         id: '026',
         type: 'electric',
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 110
     },
     {
         name: 'Sandshrew',
         id: '027',
         type: 'ground',
-        hp: null,
+        hp: 50,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 40
     },
     {
         name: 'Sandslash',
         id: '028',
         type: 'ground',
-        hp: null,
+        hp: 75,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 65
     },
     {
         name: 'Nidoran(F)',
         id: '029',
         type: 'poison',
-        hp: null,
+        hp: 55,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 41
     },
     {
         name: 'Nidorina',
         id: '030',
         type: 'poison',
-        hp: null,
+        hp: 70,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 56
     },
     {
         name: 'Nidoqueen',
         id: '031',
         type: 'poison',
-        hp: null,
+        hp: 90,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 76
     },
     {
         name: 'Nidoran(M)',
         id: '032',
         type: 'poison',
-        hp: null,
+        hp: 46,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 50
     },
     {
         name: 'Nidorino',
         id: '033',
         type: 'poison',
-        hp: null,
+        hp: 61,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 65
     },
     {
         name: 'Nidoking',
         id: '034',
         type: ['poison','ground'],
-        hp: 3600,
-        attack: 69,
+        hp: 81,
+        attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 85
     },    
     {
         name: 'Clefairy',
         id: '035',
         type: 'fairy',
-        hp: null,
+        hp: 70,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 35
     },
     {
         name: 'Clefable',
         id: '036',
         type: 'fairy',
-        hp: null,
+        hp: 95,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 60
     },
     {
         name: 'Vulpix',
         id: '037',
         type: 'fire',
-        hp: null,
+        hp: 38,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 65
     },
     {
         name: 'Ninetales',
         id: '038',
         type: 'fire',
-        hp: null,
+        hp: 73,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 100
     },
     {
         name: 'Jigglypuff',
         id: '039',
         type: ['normal','fairy'],
-        hp: null,
+        hp: 115,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 20
     },
     {
         name: 'Wigglytuff',
         id: '040',
         type: ['normal','fairy'],
-        hp: null,
+        hp: 140,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 45
     },
     {
         name: 'Zubat',
         id: '041',
         type: ['poison','flying'],
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 55
     },
     {
         name: 'Golbat',
         id: '042',
         type: ['poison','flying'],
-        hp: null,
+        hp: 75,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 90
     },
     {
         name: 'Oddish',
         id: '043',
         type: ['grass','poison'],
-        hp: null,
+        hp: 45,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 30
     },{
         name: 'Gloom',
         id: '044',
         type: ['grass','poison'],
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 40
     },
     {
         name: 'Vileplume',
         id: '045',
         type: ['grass','poison'],
-        hp: null,
+        hp: 75,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 50
     },
     {
         name: 'Paras',
         id: '046',
         type: ['bug','grass'],
-        hp: null,
+        hp: 35,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 25
     },
     {
         name: 'Parasect',
         id: '047',
         type: ['bug','grass'],
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 30
     },
     {
         name: 'Venonat',
         id: '048',
         type: ['bug','poison'],
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 45
     },
     {
         name: 'Venomoth',
         id: '049',
         type: ['bug','poison'],
-        hp: null,
+        hp: 70,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 90
     },
     {
         name: 'Diglett',
         id: '050',
         type: 'ground',
-        hp: null,
+        hp: 10,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 95
     },
     {
         name: 'Dugtrio',
         id: '051',
         type: 'ground',
-        hp: null,
+        hp: 35,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 120
     },
     {
         name: 'Meowth',
         id: '052',
         type: 'normal',
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 90
     },
     {
         name: 'Persian',
         id: '053',
         type: 'normal',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 115
     },
     {
         name: 'Psyduck',
         id: '054',
         type: 'water',
-        hp: null,
+        hp: 50,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 55
     },
     {
         name: 'Golduck',
         id: '055',
         type: 'water',
-        hp: 2700,
+        hp: 80,
         attack: 72,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 85
     },
     {
         name: 'Mankey',
         id: '056',
         type: 'fighting',
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 70
     },
     {
         name: 'Primeape',
         id: '057',
         type: 'fighting',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 95
     },
     {
         name: 'Growlithe',
         id: '058',
         type: 'fire',
-        hp: null,
+        hp: 55,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 60
     },
     {
         name: 'Arcanine',
         id: '059',
         type: 'fire',
-        hp: null,
+        hp: 90,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 95
     },
     {
         name: 'Poliwag',
         id: '060',
         type: 'water',
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 90
     },
     {
         name: 'Poliwhirl',
         id: '061',
         type: 'water',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 90
     },
     {
         name: 'Poliwrath',
         id: '062',
         type: ['water','fighting'],
-        hp: null,
+        hp: 90,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 70
     },
     {
         name: 'Abra',
         id: '063',
         type: 'psychic',
-        hp: null,
+        hp: 25,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 90
     },
     {
         name: 'Kadabra',
         id: '064',
         type: 'psychic',
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 105
     },
     {
         name: 'Alakazam',
         id: '065',
         type: 'psychic',
-        hp: 2700,
-        attack: 72,
+        hp: 55,
+        attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 120
     },
     {
         name: 'Machop',
         id: '066',
         type: 'fighting',
-        hp: null,
+        hp: 70,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 35
     },
     {
         name: 'Machoke',
         id: '067',
         type: 'fighting',
-        hp: null,
+        hp: 80,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 45
     },
     {
         name: 'Machamp',
         id: '068',
         type: 'fighting',
-        hp: 3300,
-        attack: 68,
+        hp: 90,
+        attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 55
     },
     {
         name: 'Bellsprout',
         id: '069',
         type: ['grass','poison'],
-        hp: null,
+        hp: 50,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 40
     },
     {
         name: 'Weepinbell',
         id: '070',
         type: ['grass','poison'],
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 55
     },
     {
         name: 'Victreebel',
         id: '071',
         type: ['grass','poison'],
-        hp: null,
+        hp: 80,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 70
     },
     {
         name: 'Tentacool',
         id: '072',
         type: ['water','poison'],
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 70
     },
     {
         name: 'Tentacruel',
         id: '073',
         type: ['water','poison'],
-        hp: null,
+        hp: 80,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 100
     },
     {
         name: 'Geodude',
         id: '074',
         type: ['rock','ground'],
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 20
     },
     {
         name: 'Graveler',
         id: '075',
         type: ['rock','ground'],
-        hp: null,
+        hp: 55,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 35
     },
     {
         name: 'Golem',
         id: '076',
         type: ['rock','ground'],
-        hp: null,
+        hp: 80,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 45
     },
     {
         name: 'Ponyta',
         id: '077',
         type: 'fire',
-        hp: null,
+        hp: 50,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 90
     },
     {
         name: 'Rapidash',
         id: '078',
         type: 'fire',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 105
     },
     {
         name: 'Slowpoke',
         id: '079',
         type: ['water','psychic'],
-        hp: null,
+        hp: 90,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 15
     },
     {
         name: 'Slowbro',
         id: '080',
         type: ['water','psychic'],
-        hp: null,
+        hp: 95,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 30
     },
     {
         name: 'Magnemite',
         id: '081',
         type: ['electric','steel'],
-        hp: null,
+        hp: 25,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 45
     },
     {
         name: 'Magneton',
         id: '082',
         type: ['electric','steel'],
-        hp: null,
+        hp: 50,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 70
     },
     {
         name: "Farfetch'd",
         id: '083',
         type: ['normal','flying'],
-        hp: null,
+        hp: 52,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 60
     },
     {
         name: 'Doduo',
         id: '084',
         type: ['normal','flying'],
-        hp: null,
+        hp: 35,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 75
     },
     {
         name: 'Dodrio',
         id: '085',
         type: ['normal','flying'],
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 110
     },
     {
         name: 'Seel',
         id: '086',
         type: 'water',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 45
     },
     {
         name: 'Dewgong',
         id: '087',
         type: ['water','ice'],
-        hp: null,
+        hp: 90,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 70
     },
     {
         name: 'Grimer',
         id: '088',
         type: 'poison',
-        hp: null,
+        hp: 80,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 25
     },
     {
         name: 'Muk',
         id: '089',
         type: 'poison',
-        hp: null,
+        hp: 105,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 50
     },
     {
         name: 'Shellder',
         id: '090',
         type: 'water',
-        hp: null,
+        hp: 30,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 40
     },
     {
         name: 'Cloyster',
         id: '091',
         type: ['water','ice'],
-        hp: null,
+        hp: 50,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 70
     },
     {
         name: 'Gastly',
         id: '092',
         type: ['ghost','poison'],
-        hp: null,
+        hp: 30,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 80
     },
     {
         name: 'Hunter',
         id: '093',
         type: ['ghost','poison'],
-        hp: null,
+        hp: 45,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 95
     },
     {
         name: 'Gengar',
         id: '094',
         type: ['ghost','poison'],
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 110
     },
     {
         name: 'Onix',
         id: '095',
         type: ['rock','ground'],
-        hp: null,
+        hp: 35,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 70
     },
     {
         name: 'Drowzee',
         id: '096',
         type: 'psychic',
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 42
     },
     {
         name: 'Hypno',
         id: '097',
         type: 'psychic',
-        hp: null,
+        hp: 85,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 67
     },
     {
         name: 'Krabby',
         id: '098',
         type: 'water',
-        hp: null,
+        hp: 30,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 50
     },
     {
         name: 'Kingler',
         id: '099',
         type: 'water',
-        hp: null,
+        hp: 55,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 75
     },
     {
         name: 'Voltorb',
         id: '100',
         type: 'electric',
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 100
     },
     {
         name: 'Electrode',
         id: '101',
         type: 'electric',
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 150
     },
     {
         name: 'Exeggcute',
         id: '102',
         type: ['grass','psychic'],
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 40
     },
     {
         name: 'Exeggutor',
         id: '103',
         type: ['grass','psychic'],
-        hp: null,
+        hp: 95,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 45
     },
     {
         name: 'Cubone',
         id: '104',
         type: 'ground',
-        hp: null,
+        hp: 50,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 35
     },
     {
         name: 'Marowak',
         id: '105',
         type: 'ground',
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 45
     },
     {
         name: 'Hitmonlee',
         id: '106',
         type: 'fighting',
-        hp: null,
+        hp: 50,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 87
     },
     {
         name: 'Hitmonchan',
         id: '107',
         type: 'fighting',
-        hp: null,
+        hp: 50,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 76
     },
     {
         name: 'Lickitung',
         id: '108',
         type: 'normal',
-        hp: null,
+        hp: 90,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 30
     },
     {
         name: 'Koffing',
         id: '109',
         type: 'poison',
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 35
     },
     {
         name: 'Weezing',
         id: '110',
         type: 'poison',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 60
     },
     {
         name: 'Rhyhorn',
         id: '111',
         type: ['ground','rock'],
-        hp: null,
+        hp: 80,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 25
     },
     {
         name: 'Rhydon',
         id: '112',
         type: ['ground','rock'],
-        hp: null,
+        hp: 105,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 40
     },
     {
         name: 'Chansey',
         id: '113',
         type: 'normal',
-        hp: null,
+        hp: 250,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 50
     },
     {
         name: 'Tangela',
         id: '114',
         type: 'grass',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 60
     },
     {
         name: 'Kangaskhan',
         id: '115',
         type: 'normal',
-        hp: 3700,
-        attack: 66,
+        hp: 105,
+        attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 90
     },
     {
         name: 'Horsea',
         id: '116',
         type: 'water',
-        hp: null,
+        hp: 30,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 60
     },
     {
         name: 'Seadra',
         id: '117',
         type: 'water',
-        hp: null,
+        hp: 55,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 85
     },
     {
         name: 'Goldeen',
         id: '118',
         type: 'water',
-        hp: null,
+        hp: 45,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 63
     },
     {
         name: 'Seaking',
         id: '119',
         type: 'water',
-        hp: null,
+        hp: 80,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 68
     },
     {
         name: 'Staryu',
         id: '120',
         type: 'water',
-        hp: null,
+        hp: 30,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 85
     },
     {
         name: 'Starmie',
         id: '121',
         type: ['water','psychic'],
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 115
     },
     {
         name: 'Mr. Mime',
         id: '122',
         type: ['psychic','fairy'],
-        hp: null,
+        hp: 40,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 90
     },
     {
         name: 'Scyther',
         id: '123',
         type: ['bug','flying'],
-        hp: null,
+        hp: 70,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 105
     },
     {
         name: 'Jynx',
         id: '124',
         type: ['ice','psychic'],
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 95
     },
     {
         name: 'Electabuzz',
         id: '125',
         type: 'electric',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 105
     },
     {
         name: 'Magmar',
         id: '126',
         type: 'fire',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 93
     },
     {
         name: 'Pinsir',
         id: '127',
         type: 'bug',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 85
     },
     {
         name: 'Tauros',
         id: '128',
         type: 'normal',
-        hp: null,
+        hp: 75,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 110 
     },
     {
         name: 'Magikarp',
         id: '129',
         type: 'water',
-        hp: null,
+        hp: 20,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 80
     },
     {
         name: 'Gyarados',
         id: '130',
         type: ['water','flying'],
-        hp: null,
+        hp: 95,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 81
     },
     {
         name: 'Lapras',
         id: '131',
         type: ['water','ice'],
-        hp: null,
+        hp: 130,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 60
     },
     {
         name: 'Ditto',
         id: '132',
         type: 'normal',
-        hp: null,
+        hp: 48,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 48
     },
     {
         name: 'Eevee',
         id: '133',
         type: 'normal',
-        hp: null,
+        hp: 55,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 55
     },
     {
         name: 'Vaporeon',
         id: '134',
         type: 'water',
-        hp: null,
+        hp: 130,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 65
     },
     {
         name: 'Jolteon',
         id: '135',
         type: 'electric',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 130
     },
     {
         name: 'Flareon',
         id: '136',
         type: 'fire',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 65
     },
     {
         name: 'Porygon',
         id: '137',
         type:'normal',
-        hp: null,
+        hp: 65,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 40
     },
     {
         name: 'Omanyte',
         id: '138',
         type: ['rock','water'],
-        hp: null,
+        hp: 35,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 35
     },
     {
         name: 'Omastar',
         id: '139',
         type: ['rock','water'],
-        hp: null,
+        hp: 70,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 55
     },
     {
         name: 'Kabuto',
         id: '140',
         type: ['rock','water'],
-        hp: null,
+        hp: 30,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 55
     },
     {
         name: 'Kabutops',
         id: '141',
         type: ['rock','water'],
-        hp: null,
+        hp: 60,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 80
     },
     {
         name: 'Aerodactyl',
         id: '142',
         type: ['rock','flying'],
-        hp: null,
+        hp: 80,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 130
     },
     {
         name: 'Snorlax',
         id: '143',
         type: 'normal',
-        hp: null,
+        hp: 160,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 30
     },
     {
         name: 'Articuno',
         id: '144',
         type: ['ice','flying'],
-        hp: null,
+        hp: 90,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 85
     },
     {
         name: 'Zapdos',
         id: '145',
         type: ['electric','flying'],
-        hp: null,
+        hp: 90,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 100
     },
     {
         name: 'Moltres',
         id: '146',
         type: ['fire','flying'],
-        hp: null,
+        hp: 90,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 90
     },
     {
         name: 'Dratini',
         id: '147',
         type: 'dragon',
-        hp: null,
+        hp: 41,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 50
     },
     {
         name: 'Dragonair',
         id: '148',
         type: 'dragon',
-        hp: null,
+        hp: 61,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 70
     },
     {
         name: 'Dragonite',
         id: '149',
         type: ['dragon','flying'],
-        hp: null,
+        hp: 91,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 80
     },
     {
         name: 'Mewtwo',
         id: '150',
         type: 'psychic',
-        hp: null,
+        hp: 106,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 130
     },
     {
         name: 'Mew',
         id: '151',
         type: 'psychic',
-        hp: null,
+        hp: 100,
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: null
+        speed: 100
     }
 ]
