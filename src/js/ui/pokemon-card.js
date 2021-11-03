@@ -12,10 +12,6 @@ export class PokemonCard extends BaseElement {
     this.pokemon = pokemon;
   }
 
-  getPoke() {
-    return console.log(this.pokemon.id) + console.log(this.pokemon.id)
-  }
-
   getImage() {
     const pokemonImage = pokemonImagesArray.filter(image => image.includes(`pokemon${this.pokemon.id}`));
 
@@ -23,7 +19,7 @@ export class PokemonCard extends BaseElement {
 
     return pokemonImage;
   }
-  
+
   getTypeImg() {
 
     // If there is more than one type
@@ -53,7 +49,7 @@ export class PokemonCard extends BaseElement {
 
     // Get argument from arguments array
     const className = arguments[0][0][1];
-    
+
     return `
             <li class="${className}__card-container base-card-container">
               <div class="${className}__card base-card">

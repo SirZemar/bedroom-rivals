@@ -13,6 +13,7 @@ export class Arena {
         this.playerOneArray = playerOneArray;
         this.playerTwoArray = playerTwoArray;
 
+        // variables declared 
         this.captainOneTeam = null;
         this.captainTwoTeam = null;
         this.teamOne = [];
@@ -31,13 +32,13 @@ export class Arena {
     }
 
 
-  /*   set timeOutOne(bolean) {
-        this._timeOutOne = bolean;
-    }
-
-    get timeOutButton() {
-        return this._timeOutOne
-    } */
+    /*   set timeOutOne(bolean) {
+          this._timeOutOne = bolean;
+      }
+  
+      get timeOutButton() {
+          return this._timeOutOne
+      } */
 
     get date() {
         return this._date
