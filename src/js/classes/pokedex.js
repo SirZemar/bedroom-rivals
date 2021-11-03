@@ -15,7 +15,7 @@ export class Pokedex {
         this.playerTwoTeam = [];
     }
 
-    set pokedexArrayData(pokedex) {
+    set setPokedexArrayData(pokedex) {
         this.pokedexArray = pokedex;
     }
 
@@ -56,7 +56,7 @@ export class Pokedex {
             //Find pokemon selected and create new card for selected pokemon
             const pokemonName = pokedexCard.querySelector('.pokedex__list__card__name').innerHTML;
             const selectedPokemon = this.pokedexArray.filter(pokemon => pokemon.name === pokemonName)[0];
-            
+
             const newSelectedPokemon = new Pokemon(selectedPokemon.name, selectedPokemon.id, selectedPokemon.type, selectedPokemon.hp * 20, selectedPokemon.attack, selectedPokemon.attackSpecial, selectedPokemon.accuracy, selectedPokemon.speed);
 
             const pokemonCard = new PokemonCard(newSelectedPokemon);
@@ -105,7 +105,7 @@ export class Pokedex {
 
         });
 
-        $(cardSelected.element[0]).find('.pokedex__team-list__card__radio__captain').on('change',  (event) => {
+        $(cardSelected.element[0]).find('.pokedex__team-list__card__radio__captain').on('change', (event) => {
 
             // All captain to false
             this.team.forEach((card) => {
@@ -113,7 +113,7 @@ export class Pokedex {
             })
 
             // Selected is captain
-            if($(event.target).is(':checked')) {
+            if ($(event.target).is(':checked')) {
 
                 cardSelected.pokemon.captain = true
             }

@@ -15,7 +15,7 @@ const pokedexArray = dataService.getPokedexArray();
 // Pokedex has all methods related to the pokedex section
 const pokedex = new Pokedex();
 
-pokedex.pokedexArrayData = pokedexArray
+pokedex.setPokedexArrayData = pokedexArray
 
 pokedex.createPokedex();
 
