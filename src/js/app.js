@@ -30,8 +30,7 @@ export function arenaLoad() {
         arena.setPokemons();
         arena.maxHealth();
 
-        arena.benchTeamOne();
-        arena.benchTeamTwo();
+        arena.displayTeams();
 
         arena.setActive();
         arena.pokemonActiveOne();
@@ -45,8 +44,13 @@ export function arenaLoad() {
         arena.entryStatus(playerOne);
         arena.entryStatus(playerTwo);
 
-        arena.currentSpeed(playerOne);
-        arena.currentSpeed(playerTwo);
+        arena.animationBarSpeed();
+
+        arena.animationSpeedPlay(playerOne);
+        arena.animationSpeedPlay(playerTwo);
+
+        arena.animationSpeedOnComplete(playerOne);
+        arena.animationSpeedOnComplete(playerTwo);
 
         arena.timeOutButton();
 

@@ -6,6 +6,7 @@ import { Pokedex } from './pokedex';
 import { PokemonCard } from '../ui/pokemon-card';
 import { Pokemon } from './pokemon';
 import { itemsImages } from '../images/items';
+import { Anime } from '../animations/animejs';
 
 export class Arena {
 
@@ -29,19 +30,11 @@ export class Arena {
         this.dateOne = null;
         this.dateTwo = null;
 
-    }
+        this.speedBarOne = null;
+        this.speedBarOne = null;
 
-
-    /*   set timeOutOne(bolean) {
-          this._timeOutOne = bolean;
-      }
-  
-      get timeOutButton() {
-          return this._timeOutOne
-      } */
-
-    get date() {
-        return this._date
+        this.speedPausedOne = null;
+        this.speedPausedTwo = null;
     }
 
     setPokemons() {
@@ -69,16 +62,13 @@ export class Arena {
 
     }
 
-    benchTeamOne() {
+    displayTeams() {
         this.playerOneArray.forEach((pokemonArr) => {
             if (!pokemonArr.pokemon.captain === true) {
                 pokemonArr.appendToElement($('#bench-player-one'), 'arena__main__bench-list');
             }
         });
 
-    }
-
-    benchTeamTwo() {
         this.playerTwoArray.forEach((pokemonArr) => {
             if (!pokemonArr.pokemon.captain === true) {
                 pokemonArr.appendToElement($('#bench-player-two'), 'arena__main__bench-list');
@@ -166,7 +156,6 @@ export class Arena {
         }
     }
 
-
     currentHealth(attackant, damage) {
 
         switch (attackant) {
@@ -203,7 +192,6 @@ export class Arena {
                     $('#hp-player-two').html(`${currentHealth}/${maxHealth}`);
                 }
                 break;
-
         }
     }
 
@@ -218,15 +206,7 @@ export class Arena {
                 // css style
                 $(event.target).addClass('selected');
 
-                this.speedBarAnimationOne.queue({}, {
-                    onEnd: () => {
-                        this.dateOne = Date.now();
-                        this.speedBarAnimationTwo.pause();
 
-                        // Unables other player time-out button
-                        $('#time-out-two').css({ 'pointer-events': 'none', 'opacity': '0.5' });
-                    }
-                });
             } else {
 
                 this.timeOutOne = false;
@@ -237,13 +217,16 @@ export class Arena {
                 // Enales other player time-out button
                 $('#time-out-two').css({ 'pointer-events': '', 'opacity': '1' });
 
-                this.speedBarAnimationOne.reset()
-                this.currentSpeed('player-one');
-
-                this.speedBarAnimationTwo.resume();
-
                 // attack if nothing change (temp)
-                this.currentHealth('player-one', 200);
+                // this.currentHealth('player-one', 200);
+
+
+                // Restarts
+                if (this.speedPausedOne) {
+                    this.animationSpeedPlay('player-one');
+                    this.animationSpeedPlay('player-two');
+                    this.speedPausedOne = false;
+                }
 
             }
         })
@@ -257,15 +240,7 @@ export class Arena {
                 // css style
                 $(event.target).addClass('selected');
 
-                this.speedBarAnimationTwo.queue({}, {
-                    onEnd: () => {
-                        this.dateTwo = Date.now();
-                        this.speedBarAnimationOne.pause();
 
-                        // Unables other player time-out button
-                        $('#time-out-one').css({ 'pointer-events': 'none', 'opacity': '0.5' });
-                    }
-                });
             } else {
 
                 this.timeOutTwo = false;
@@ -276,25 +251,17 @@ export class Arena {
                 // Enales other player time-out button
                 $('#time-out-one').css({ 'pointer-events': '', 'opacity': '1' });
 
-                this.speedBarAnimationTwo.reset()
-                this.currentSpeed('player-two');
-
-                this.speedBarAnimationOne.resume();
-
                 // attack if nothing change (temp)
-                this.currentHealth('player-two', 200);
+                // this.currentHealth('player-two', 200);
+
+                // Restarts
+                if (this.speedPausedTwo) {
+                    this.animationSpeedPlay('player-two');
+                    this.animationSpeedPlay('player-one');
+                    this.speedPausedTwo = false;
+                }
             }
         })
-    }
-
-    simultaneousAtkCheck() {
-
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(this.dateOne - this.dateTwo);
-            }, 10)
-        });
-
     }
 
     currentSpeed(player) {
@@ -306,80 +273,104 @@ export class Arena {
 
                 currentSpeedMs = (45 - 0.12 * this.captainOneTeam.speed) * 100;
 
-                // Speed bar animation with call of function to change current health after attack
-
-                // this.speedBarAnimationOne = new Keyframes(document.getElementById('sp-player-one'));
-
-                this.speedBarAnimationOne.loop({
-                    name: 'speedTransition',
-                    duration: `${currentSpeedMs}ms`,
-                    timingFunction: 'linear'
-                }, {
-                    onEnd: () => {
-
-                        // Exception to a simultaneous turn, time-out activated
-                        if (this.timeOutOne || this.timeOutTwo) {
-
-                            this.dateOne = Date.now();
-                            console.log(Date.now() + ' antes')
-                            this.simultaneousAtkCheck().then((value) => {
-                                console.log(Date.now() + ' depois')
-
-                                if (value < 5 && value > -5) { // Less than 5ms
-
-                                    this.speedBarAnimationOne.reset();
-                                    this.speedBarAnimationOne.play({
-                                        name: 'speedTransition',
-                                        duration: `${currentSpeedMs}ms`,
-                                        timingFunction: 'linear'
-                                    });
-                                    this.speedBarAnimationOne.pause();
-
-                                }
-                            })
-                        };
-
-                        return this.currentHealth(player, 200);
-                    }
-                })
-                break;
+                return currentSpeedMs;
             case 'player-two':
 
                 currentSpeedMs = (45 - 0.12 * this.captainTwoTeam.speed) * 100;
 
-                // Speed bar animation with call of function to change current health after attack
+                return currentSpeedMs;
+        }
+    }
 
-                // this.speedBarAnimationTwo = new Keyframes(document.getElementById('sp-player-two'));
+    animationBarSpeed() {
+        this.speedBarOne = Anime.animationSpeed('player-one', this.currentSpeed('player-one'));
+        this.speedBarTwo = Anime.animationSpeed('player-two', this.currentSpeed('player-two'));
+    }
 
-                this.speedBarAnimationTwo.loop({
-                    name: 'speedTransition',
-                    duration: `${currentSpeedMs}ms`,
-                    timingFunction: 'linear'
-                }, {
-                    onEnd: () => {
+    animationSpeedPlay(player) {
+        console.log(this.speedBarOne)
+        switch (player) {
+            case 'player-one':
+                this.speedBarOne.play();
+                break;
+            case 'player-two':
+                this.speedBarTwo.play();
+                break;
+        }
+    }
 
-                        // Exception to a simultaneous turn, time-out activated
-                        if (this.timeOutOne || this.timeOutTwo) {
+    animationSpeedPause(player) {
 
-                            this.dateTwo = Date.now();
+        switch (player) {
+            case 'player-one':
+                this.speedBarOne.loopComplete = () => {
 
-                            this.simultaneousAtkCheck().then((value) => {
-                                console.log(value)
-                                if (value < 5 && value > -5) {
-                                    this.speedBarAnimationTwo.reset();
-                                    this.speedBarAnimationTwo.play({
-                                        name: 'speedTransition',
-                                        duration: `${currentSpeedMs}ms`,
-                                        timingFunction: 'linear'
-                                    });
-                                    this.speedBarAnimationTwo.pause();
-                                };
-                            })  // Less than 5ms
-                        }
+                    this.speedBarOne.pause();
+                    this.speedBarTwo.pause();
 
-                        return this.currentHealth(player, 200);
+                    // Unables time-out button
+                    $('#time-out-two').css({ 'pointer-events': 'none', 'opacity': '0.5' });
+
+                    $('#time-out-one:not(.selected)').on('click', console.log('asd'));
+                }
+                break;
+            case 'player-two':
+                this.speedBarTwo.loopComplete = () => {
+                    this.speedBarTwo.pause();
+                    this.speedBarOne.pause();
+
+                    // Unables time-out button
+                    $('#time-out-one').css({ 'pointer-events': 'none', 'opacity': '0.5' });
+                }
+                break;
+        }
+    }
+
+    animationSpeedOnComplete(player) {
+        switch (player) {
+            case 'player-one':
+                this.speedBarOne.loopComplete = () => {
+
+                    if (this.timeOutOne) {
+                        this.speedBarOne.pause();
+                        this.speedBarTwo.pause();
+
+                        // Unables time-out button
+                        $('#time-out-two').css({ 'pointer-events': 'none', 'opacity': '0.5' });
+
+                        this.speedPausedOne = true;
+                        return
+                    } else {
+                        //attack
+                        this.currentHealth(player, 200)
                     }
-                })
+
+                }
+                break;
+            case 'player-two':
+                this.speedBarTwo.loopComplete = () => {
+                    if (this.timeOutTwo) {
+
+                        this.speedBarTwo.pause();
+                        this.speedBarOne.pause();
+
+                        // Unables time-out button
+                        $('#time-out-one').css({ 'pointer-events': 'none', 'opacity': '0.5' });
+
+                        this.speedPausedTwo = true;
+                    }
+                }
+                break;
+        }
+    }
+
+    animationSpeedReset(player) {
+        switch (player) {
+            case 'player-one':
+                this.speedBarOne.restart();
+                break;
+            case 'player-two':
+                this.speedBarTwo.restart();
                 break;
         }
     }
