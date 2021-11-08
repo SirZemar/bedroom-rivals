@@ -4,7 +4,7 @@ export const pokemonData = [
         id: '001',
         type: ['grass', 'poison'],
         hp: 45,
-        attack: null,
+        attack: 57,
         attackSpecial: null,
         accuracy: null,
         speed: 45
@@ -14,7 +14,7 @@ export const pokemonData = [
         id: '002',
         type: ['grass', 'poison'],
         hp: 60,
-        attack: null,
+        attack: 71,
         attackSpecial: null,
         accuracy: null,
         speed: 60
@@ -24,7 +24,7 @@ export const pokemonData = [
         id: '003',
         type: ['grass', 'poison'],
         hp: 80,
-        attack: 69,
+        attack: 91,
         attackSpecial: null,
         accuracy: null,
         speed: 80
@@ -34,7 +34,7 @@ export const pokemonData = [
         id: '004',
         type: 'fire',
         hp: 39,
-        attack: null,
+        attack: 56,
         attackSpecial: null,
         accuracy: null,
         speed: 65
@@ -44,7 +44,7 @@ export const pokemonData = [
         id: '005',
         type: 'fire',
         hp: 58,
-        attack: null,
+        attack: 72,
         attackSpecial: null,
         accuracy: null,
         speed: 80
@@ -54,7 +54,7 @@ export const pokemonData = [
         id: '006',
         type: ['fire', 'flying'],
         hp: 78,
-        attack: 70,
+        attack: 97,
         attackSpecial: null,
         accuracy: null,
         speed: 100
@@ -64,7 +64,7 @@ export const pokemonData = [
         id: '007',
         type: 'water',
         hp: 44,
-        attack: null,
+        attack: 49,
         attackSpecial: null,
         accuracy: null,
         speed: 43
@@ -74,7 +74,7 @@ export const pokemonData = [
         id: '008',
         type: 'water',
         hp: 59,
-        attack: null,
+        attack: 64,
         attackSpecial: null,
         accuracy: null,
         speed: 58
@@ -84,7 +84,7 @@ export const pokemonData = [
         id: '009',
         type: 'water',
         hp: 79,
-        attack: 64,
+        attack: 84,
         attackSpecial: null,
         accuracy: null,
         speed: 78
@@ -94,7 +94,7 @@ export const pokemonData = [
         id: '010',
         type: 'bug',
         hp: 45,
-        attack: null,
+        attack: 25,
         attackSpecial: null,
         accuracy: null,
         speed: 45
@@ -104,7 +104,7 @@ export const pokemonData = [
         id: '011',
         type: 'bug',
         hp: 50,
-        attack: null,
+        attack: 23,
         attackSpecial: null,
         accuracy: null,
         speed: 30
@@ -114,7 +114,7 @@ export const pokemonData = [
         id: '012',
         type: ['bug', 'flying'],
         hp: 60,
-        attack: 60,
+        attack: 68,
         attackSpecial: null,
         accuracy: null,
         speed: 70
@@ -124,7 +124,7 @@ export const pokemonData = [
         id: '013',
         type: ['bug', 'poison'],
         hp: 40,
-        attack: null,
+        attack: 28,
         attackSpecial: null,
         accuracy: null,
         speed: 50
@@ -134,7 +134,7 @@ export const pokemonData = [
         id: '014',
         type: ['bug', 'poison'],
         hp: 45,
-        attack: null,
+        attack: 25,
         attackSpecial: null,
         accuracy: null,
         speed: 35
@@ -144,7 +144,7 @@ export const pokemonData = [
         id: '015',
         type: ['bug', 'poison'],
         hp: 65,
-        attack: null,
+        attack: 68,
         attackSpecial: null,
         accuracy: null,
         speed: 75
@@ -154,7 +154,7 @@ export const pokemonData = [
         id: '016',
         type: ['normal', 'flying'],
         hp: 40,
-        attack: null,
+        attack: 40,
         attackSpecial: null,
         accuracy: null,
         speed: 56
@@ -164,7 +164,7 @@ export const pokemonData = [
         id: '017',
         type: ['normal', 'flying'],
         hp: 63,
-        attack: null,
+        attack: 55,
         attackSpecial: null,
         accuracy: null,
         speed: 71
@@ -174,7 +174,7 @@ export const pokemonData = [
         id: '018',
         type: ['normal', 'flying'],
         hp: 83,
-        attack: null,
+        attack: 75,
         attackSpecial: null,
         accuracy: null,
         speed: 101
@@ -184,7 +184,7 @@ export const pokemonData = [
         id: '019',
         type: 'normal',
         hp: 30,
-        attack: null,
+        attack: 41,
         attackSpecial: null,
         accuracy: null,
         speed: 72
@@ -194,7 +194,7 @@ export const pokemonData = [
         id: '020',
         type: 'normal',
         hp: 55,
-        attack: null,
+        attack: 66,
         attackSpecial: null,
         accuracy: null,
         speed: 97
@@ -204,7 +204,7 @@ export const pokemonData = [
         id: '021',
         type: ['normal', 'flying'],
         hp: 40,
-        attack: null,
+        attack: 46,
         attackSpecial: null,
         accuracy: null,
         speed: 70
@@ -214,7 +214,7 @@ export const pokemonData = [
         id: '022',
         type: ['normal', 'flying'],
         hp: 65,
-        attack: null,
+        attack: 76,
         attackSpecial: null,
         accuracy: null,
         speed: 100
@@ -224,7 +224,7 @@ export const pokemonData = [
         id: '023',
         type: 'poison',
         hp: 35,
-        attack: null,
+        attack: 50,
         attackSpecial: null,
         accuracy: null,
         speed: 55
@@ -234,7 +234,7 @@ export const pokemonData = [
         id: '024',
         type: 'poison',
         hp: 60,
-        attack: null,
+        attack: 80,
         attackSpecial: null,
         accuracy: null,
         speed: 80
@@ -244,7 +244,7 @@ export const pokemonData = [
         id: '025',
         type: 'electric',
         hp: 35,
-        attack: null,
+        attack: 53,
         attackSpecial: null,
         accuracy: null,
         speed: 90
@@ -254,7 +254,7 @@ export const pokemonData = [
         id: '026',
         type: 'electric',
         hp: 60,
-        attack: null,
+        attack: 90,
         attackSpecial: null,
         accuracy: null,
         speed: 110
@@ -264,7 +264,7 @@ export const pokemonData = [
         id: '027',
         type: 'ground',
         hp: 50,
-        attack: null,
+        attack: 48,
         attackSpecial: null,
         accuracy: null,
         speed: 40
@@ -274,7 +274,7 @@ export const pokemonData = [
         id: '028',
         type: 'ground',
         hp: 75,
-        attack: null,
+        attack: 73,
         attackSpecial: null,
         accuracy: null,
         speed: 65
@@ -284,7 +284,7 @@ export const pokemonData = [
         id: '029',
         type: 'poison',
         hp: 55,
-        attack: null,
+        attack: 44,
         attackSpecial: null,
         accuracy: null,
         speed: 41
@@ -294,7 +294,7 @@ export const pokemonData = [
         id: '030',
         type: 'poison',
         hp: 70,
-        attack: null,
+        attack: 59,
         attackSpecial: null,
         accuracy: null,
         speed: 56
@@ -304,7 +304,7 @@ export const pokemonData = [
         id: '031',
         type: 'poison',
         hp: 90,
-        attack: null,
+        attack: 84,
         attackSpecial: null,
         accuracy: null,
         speed: 76
@@ -314,7 +314,7 @@ export const pokemonData = [
         id: '032',
         type: 'poison',
         hp: 46,
-        attack: null,
+        attack: 49,
         attackSpecial: null,
         accuracy: null,
         speed: 50
@@ -324,7 +324,7 @@ export const pokemonData = [
         id: '033',
         type: 'poison',
         hp: 61,
-        attack: null,
+        attack: 64,
         attackSpecial: null,
         accuracy: null,
         speed: 65
@@ -334,7 +334,7 @@ export const pokemonData = [
         id: '034',
         type: ['poison', 'ground'],
         hp: 81,
-        attack: null,
+        attack: 94,
         attackSpecial: null,
         accuracy: null,
         speed: 85
@@ -344,7 +344,7 @@ export const pokemonData = [
         id: '035',
         type: 'fairy',
         hp: 70,
-        attack: null,
+        attack: 53,
         attackSpecial: null,
         accuracy: null,
         speed: 35
@@ -354,7 +354,7 @@ export const pokemonData = [
         id: '036',
         type: 'fairy',
         hp: 95,
-        attack: null,
+        attack: 83,
         attackSpecial: null,
         accuracy: null,
         speed: 60
@@ -364,7 +364,7 @@ export const pokemonData = [
         id: '037',
         type: 'fire',
         hp: 38,
-        attack: null,
+        attack: 46,
         attackSpecial: null,
         accuracy: null,
         speed: 65
@@ -374,7 +374,7 @@ export const pokemonData = [
         id: '038',
         type: 'fire',
         hp: 73,
-        attack: null,
+        attack: 79,
         attackSpecial: null,
         accuracy: null,
         speed: 100
@@ -384,7 +384,7 @@ export const pokemonData = [
         id: '039',
         type: ['normal', 'fairy'],
         hp: 115,
-        attack: null,
+        attack: 45,
         attackSpecial: null,
         accuracy: null,
         speed: 20
@@ -394,7 +394,7 @@ export const pokemonData = [
         id: '040',
         type: ['normal', 'fairy'],
         hp: 140,
-        attack: null,
+        attack: 78,
         attackSpecial: null,
         accuracy: null,
         speed: 45
@@ -404,7 +404,7 @@ export const pokemonData = [
         id: '041',
         type: ['poison', 'flying'],
         hp: 40,
-        attack: null,
+        attack: 38,
         attackSpecial: null,
         accuracy: null,
         speed: 55
@@ -414,7 +414,7 @@ export const pokemonData = [
         id: '042',
         type: ['poison', 'flying'],
         hp: 75,
-        attack: null,
+        attack: 73,
         attackSpecial: null,
         accuracy: null,
         speed: 90
@@ -424,7 +424,7 @@ export const pokemonData = [
         id: '043',
         type: ['grass', 'poison'],
         hp: 45,
-        attack: null,
+        attack: 63,
         attackSpecial: null,
         accuracy: null,
         speed: 30
@@ -433,7 +433,7 @@ export const pokemonData = [
         id: '044',
         type: ['grass', 'poison'],
         hp: 60,
-        attack: null,
+        attack: 75,
         attackSpecial: null,
         accuracy: null,
         speed: 40
@@ -443,7 +443,7 @@ export const pokemonData = [
         id: '045',
         type: ['grass', 'poison'],
         hp: 75,
-        attack: null,
+        attack: 95,
         attackSpecial: null,
         accuracy: null,
         speed: 50
@@ -453,7 +453,7 @@ export const pokemonData = [
         id: '046',
         type: ['bug', 'grass'],
         hp: 35,
-        attack: null,
+        attack: 58,
         attackSpecial: null,
         accuracy: null,
         speed: 25
@@ -463,7 +463,7 @@ export const pokemonData = [
         id: '047',
         type: ['bug', 'grass'],
         hp: 60,
-        attack: null,
+        attack: 78,
         attackSpecial: null,
         accuracy: null,
         speed: 30
@@ -473,7 +473,7 @@ export const pokemonData = [
         id: '048',
         type: ['bug', 'poison'],
         hp: 60,
-        attack: null,
+        attack: 48,
         attackSpecial: null,
         accuracy: null,
         speed: 45
@@ -483,7 +483,7 @@ export const pokemonData = [
         id: '049',
         type: ['bug', 'poison'],
         hp: 70,
-        attack: null,
+        attack: 78,
         attackSpecial: null,
         accuracy: null,
         speed: 90
@@ -493,7 +493,7 @@ export const pokemonData = [
         id: '050',
         type: 'ground',
         hp: 10,
-        attack: null,
+        attack: 45,
         attackSpecial: null,
         accuracy: null,
         speed: 95
@@ -503,7 +503,7 @@ export const pokemonData = [
         id: '051',
         type: 'ground',
         hp: 35,
-        attack: null,
+        attack: 75,
         attackSpecial: null,
         accuracy: null,
         speed: 120
@@ -513,7 +513,7 @@ export const pokemonData = [
         id: '052',
         type: 'normal',
         hp: 40,
-        attack: null,
+        attack: 43,
         attackSpecial: null,
         accuracy: null,
         speed: 90
@@ -523,7 +523,7 @@ export const pokemonData = [
         id: '053',
         type: 'normal',
         hp: 65,
-        attack: null,
+        attack: 68,
         attackSpecial: null,
         accuracy: null,
         speed: 115
@@ -533,7 +533,7 @@ export const pokemonData = [
         id: '054',
         type: 'water',
         hp: 50,
-        attack: null,
+        attack: 59,
         attackSpecial: null,
         accuracy: null,
         speed: 55
@@ -543,7 +543,7 @@ export const pokemonData = [
         id: '055',
         type: 'water',
         hp: 80,
-        attack: 72,
+        attack: 89,
         attackSpecial: null,
         accuracy: null,
         speed: 85
@@ -553,7 +553,7 @@ export const pokemonData = [
         id: '056',
         type: 'fighting',
         hp: 40,
-        attack: null,
+        attack: 58,
         attackSpecial: null,
         accuracy: null,
         speed: 70
@@ -563,7 +563,7 @@ export const pokemonData = [
         id: '057',
         type: 'fighting',
         hp: 65,
-        attack: null,
+        attack: 83,
         attackSpecial: null,
         accuracy: null,
         speed: 95
@@ -573,7 +573,7 @@ export const pokemonData = [
         id: '058',
         type: 'fire',
         hp: 55,
-        attack: null,
+        attack: 70,
         attackSpecial: null,
         accuracy: null,
         speed: 60
@@ -583,7 +583,7 @@ export const pokemonData = [
         id: '059',
         type: 'fire',
         hp: 90,
-        attack: null,
+        attack: 105,
         attackSpecial: null,
         accuracy: null,
         speed: 95
@@ -593,7 +593,7 @@ export const pokemonData = [
         id: '060',
         type: 'water',
         hp: 40,
-        attack: null,
+        attack: 45,
         attackSpecial: null,
         accuracy: null,
         speed: 90
@@ -603,7 +603,7 @@ export const pokemonData = [
         id: '061',
         type: 'water',
         hp: 65,
-        attack: null,
+        attack: 58,
         attackSpecial: null,
         accuracy: null,
         speed: 90
@@ -613,7 +613,7 @@ export const pokemonData = [
         id: '062',
         type: ['water', 'fighting'],
         hp: 90,
-        attack: null,
+        attack: 83,
         attackSpecial: null,
         accuracy: null,
         speed: 70
@@ -623,7 +623,7 @@ export const pokemonData = [
         id: '063',
         type: 'psychic',
         hp: 25,
-        attack: null,
+        attack: 63,
         attackSpecial: null,
         accuracy: null,
         speed: 90
@@ -633,7 +633,7 @@ export const pokemonData = [
         id: '064',
         type: 'psychic',
         hp: 40,
-        attack: null,
+        attack: 78,
         attackSpecial: null,
         accuracy: null,
         speed: 105
@@ -643,7 +643,7 @@ export const pokemonData = [
         id: '065',
         type: 'psychic',
         hp: 55,
-        attack: null,
+        attack: 93,
         attackSpecial: null,
         accuracy: null,
         speed: 120
@@ -653,7 +653,7 @@ export const pokemonData = [
         id: '066',
         type: 'fighting',
         hp: 70,
-        attack: null,
+        attack: 58,
         attackSpecial: null,
         accuracy: null,
         speed: 35
@@ -663,7 +663,7 @@ export const pokemonData = [
         id: '067',
         type: 'fighting',
         hp: 80,
-        attack: null,
+        attack: 75,
         attackSpecial: null,
         accuracy: null,
         speed: 45
@@ -673,7 +673,7 @@ export const pokemonData = [
         id: '068',
         type: 'fighting',
         hp: 90,
-        attack: null,
+        attack: 98,
         attackSpecial: null,
         accuracy: null,
         speed: 55
@@ -683,7 +683,7 @@ export const pokemonData = [
         id: '069',
         type: ['grass', 'poison'],
         hp: 50,
-        attack: null,
+        attack: 73,
         attackSpecial: null,
         accuracy: null,
         speed: 40
@@ -693,7 +693,7 @@ export const pokemonData = [
         id: '070',
         type: ['grass', 'poison'],
         hp: 65,
-        attack: null,
+        attack: 88,
         attackSpecial: null,
         accuracy: null,
         speed: 55
@@ -703,7 +703,7 @@ export const pokemonData = [
         id: '071',
         type: ['grass', 'poison'],
         hp: 80,
-        attack: null,
+        attack: 103,
         attackSpecial: null,
         accuracy: null,
         speed: 70
@@ -713,7 +713,7 @@ export const pokemonData = [
         id: '072',
         type: ['water', 'poison'],
         hp: 40,
-        attack: null,
+        attack: 45,
         attackSpecial: null,
         accuracy: null,
         speed: 70
@@ -723,7 +723,7 @@ export const pokemonData = [
         id: '073',
         type: ['water', 'poison'],
         hp: 80,
-        attack: null,
+        attack: 75,
         attackSpecial: null,
         accuracy: null,
         speed: 100
@@ -733,7 +733,7 @@ export const pokemonData = [
         id: '074',
         type: ['rock', 'ground'],
         hp: 40,
-        attack: null,
+        attack: 55,
         attackSpecial: null,
         accuracy: null,
         speed: 20
@@ -743,7 +743,7 @@ export const pokemonData = [
         id: '075',
         type: ['rock', 'ground'],
         hp: 55,
-        attack: null,
+        attack: 70,
         attackSpecial: null,
         accuracy: null,
         speed: 35
@@ -753,7 +753,7 @@ export const pokemonData = [
         id: '076',
         type: ['rock', 'ground'],
         hp: 80,
-        attack: null,
+        attack: 88,
         attackSpecial: null,
         accuracy: null,
         speed: 45
@@ -763,7 +763,7 @@ export const pokemonData = [
         id: '077',
         type: 'fire',
         hp: 50,
-        attack: null,
+        attack: 75,
         attackSpecial: null,
         accuracy: null,
         speed: 90
@@ -773,7 +773,7 @@ export const pokemonData = [
         id: '078',
         type: 'fire',
         hp: 65,
-        attack: null,
+        attack: 90,
         attackSpecial: null,
         accuracy: null,
         speed: 105
@@ -783,7 +783,7 @@ export const pokemonData = [
         id: '079',
         type: ['water', 'psychic'],
         hp: 90,
-        attack: null,
+        attack: 53,
         attackSpecial: null,
         accuracy: null,
         speed: 15
@@ -793,7 +793,7 @@ export const pokemonData = [
         id: '080',
         type: ['water', 'psychic'],
         hp: 95,
-        attack: null,
+        attack: 88,
         attackSpecial: null,
         accuracy: null,
         speed: 30
@@ -803,7 +803,7 @@ export const pokemonData = [
         id: '081',
         type: ['electric', 'steel'],
         hp: 25,
-        attack: null,
+        attack: 65,
         attackSpecial: null,
         accuracy: null,
         speed: 45
@@ -813,7 +813,7 @@ export const pokemonData = [
         id: '082',
         type: ['electric', 'steel'],
         hp: 50,
-        attack: null,
+        attack: 90,
         attackSpecial: null,
         accuracy: null,
         speed: 70
@@ -823,7 +823,7 @@ export const pokemonData = [
         id: '083',
         type: ['normal', 'flying'],
         hp: 52,
-        attack: null,
+        attack: 74,
         attackSpecial: null,
         accuracy: null,
         speed: 60
@@ -833,7 +833,7 @@ export const pokemonData = [
         id: '084',
         type: ['normal', 'flying'],
         hp: 35,
-        attack: null,
+        attack: 60,
         attackSpecial: null,
         accuracy: null,
         speed: 75
@@ -843,7 +843,7 @@ export const pokemonData = [
         id: '085',
         type: ['normal', 'flying'],
         hp: 60,
-        attack: null,
+        attack: 85,
         attackSpecial: null,
         accuracy: null,
         speed: 110
@@ -853,7 +853,7 @@ export const pokemonData = [
         id: '086',
         type: 'water',
         hp: 65,
-        attack: null,
+        attack: 45,
         attackSpecial: null,
         accuracy: null,
         speed: 45
@@ -863,7 +863,7 @@ export const pokemonData = [
         id: '087',
         type: ['water', 'ice'],
         hp: 90,
-        attack: null,
+        attack: 70,
         attackSpecial: null,
         accuracy: null,
         speed: 70
@@ -873,7 +873,7 @@ export const pokemonData = [
         id: '088',
         type: 'poison',
         hp: 80,
-        attack: null,
+        attack: 60,
         attackSpecial: null,
         accuracy: null,
         speed: 25
@@ -883,7 +883,7 @@ export const pokemonData = [
         id: '089',
         type: 'poison',
         hp: 105,
-        attack: null,
+        attack: 85,
         attackSpecial: null,
         accuracy: null,
         speed: 50
@@ -893,7 +893,7 @@ export const pokemonData = [
         id: '090',
         type: 'water',
         hp: 30,
-        attack: null,
+        attack: 55,
         attackSpecial: null,
         accuracy: null,
         speed: 40
@@ -903,7 +903,7 @@ export const pokemonData = [
         id: '091',
         type: ['water', 'ice'],
         hp: 50,
-        attack: null,
+        attack: 90,
         attackSpecial: null,
         accuracy: null,
         speed: 70
@@ -913,7 +913,7 @@ export const pokemonData = [
         id: '092',
         type: ['ghost', 'poison'],
         hp: 30,
-        attack: null,
+        attack: 68,
         attackSpecial: null,
         accuracy: null,
         speed: 80
@@ -923,7 +923,7 @@ export const pokemonData = [
         id: '093',
         type: ['ghost', 'poison'],
         hp: 45,
-        attack: null,
+        attack: 83,
         attackSpecial: null,
         accuracy: null,
         speed: 95
@@ -933,7 +933,7 @@ export const pokemonData = [
         id: '094',
         type: ['ghost', 'poison'],
         hp: 60,
-        attack: null,
+        attack: 98,
         attackSpecial: null,
         accuracy: null,
         speed: 110
@@ -943,7 +943,7 @@ export const pokemonData = [
         id: '095',
         type: ['rock', 'ground'],
         hp: 35,
-        attack: null,
+        attack: 38,
         attackSpecial: null,
         accuracy: null,
         speed: 70
@@ -953,7 +953,7 @@ export const pokemonData = [
         id: '096',
         type: 'psychic',
         hp: 60,
-        attack: null,
+        attack: 46,
         attackSpecial: null,
         accuracy: null,
         speed: 42
@@ -963,7 +963,7 @@ export const pokemonData = [
         id: '097',
         type: 'psychic',
         hp: 85,
-        attack: null,
+        attack: 73,
         attackSpecial: null,
         accuracy: null,
         speed: 67
@@ -973,7 +973,7 @@ export const pokemonData = [
         id: '098',
         type: 'water',
         hp: 30,
-        attack: null,
+        attack: 65,
         attackSpecial: null,
         accuracy: null,
         speed: 50
@@ -983,7 +983,7 @@ export const pokemonData = [
         id: '099',
         type: 'water',
         hp: 55,
-        attack: null,
+        attack: 90,
         attackSpecial: null,
         accuracy: null,
         speed: 75
@@ -993,7 +993,7 @@ export const pokemonData = [
         id: '100',
         type: 'electric',
         hp: 40,
-        attack: null,
+        attack: 43,
         attackSpecial: null,
         accuracy: null,
         speed: 100
@@ -1003,7 +1003,7 @@ export const pokemonData = [
         id: '101',
         type: 'electric',
         hp: 60,
-        attack: null,
+        attack: 65,
         attackSpecial: null,
         accuracy: null,
         speed: 150
@@ -1013,7 +1013,7 @@ export const pokemonData = [
         id: '102',
         type: ['grass', 'psychic'],
         hp: 60,
-        attack: null,
+        attack: 50,
         attackSpecial: null,
         accuracy: null,
         speed: 40
@@ -1023,7 +1023,7 @@ export const pokemonData = [
         id: '103',
         type: ['grass', 'psychic'],
         hp: 95,
-        attack: null,
+        attack: 110,
         attackSpecial: null,
         accuracy: null,
         speed: 45
@@ -1033,7 +1033,7 @@ export const pokemonData = [
         id: '104',
         type: 'ground',
         hp: 50,
-        attack: null,
+        attack: 45,
         attackSpecial: null,
         accuracy: null,
         speed: 35
@@ -1043,7 +1043,7 @@ export const pokemonData = [
         id: '105',
         type: 'ground',
         hp: 60,
-        attack: null,
+        attack: 65,
         attackSpecial: null,
         accuracy: null,
         speed: 45
@@ -1053,7 +1053,7 @@ export const pokemonData = [
         id: '106',
         type: 'fighting',
         hp: 50,
-        attack: null,
+        attack: 78,
         attackSpecial: null,
         accuracy: null,
         speed: 87
@@ -1063,7 +1063,7 @@ export const pokemonData = [
         id: '107',
         type: 'fighting',
         hp: 50,
-        attack: null,
+        attack: 70,
         attackSpecial: null,
         accuracy: null,
         speed: 76
@@ -1073,7 +1073,7 @@ export const pokemonData = [
         id: '108',
         type: 'normal',
         hp: 90,
-        attack: null,
+        attack: 58,
         attackSpecial: null,
         accuracy: null,
         speed: 30
@@ -1083,7 +1083,7 @@ export const pokemonData = [
         id: '109',
         type: 'poison',
         hp: 40,
-        attack: null,
+        attack: 63,
         attackSpecial: null,
         accuracy: null,
         speed: 35
@@ -1093,7 +1093,7 @@ export const pokemonData = [
         id: '110',
         type: 'poison',
         hp: 65,
-        attack: null,
+        attack: 88,
         attackSpecial: null,
         accuracy: null,
         speed: 60
@@ -1103,7 +1103,7 @@ export const pokemonData = [
         id: '111',
         type: ['ground', 'rock'],
         hp: 80,
-        attack: null,
+        attack: 58,
         attackSpecial: null,
         accuracy: null,
         speed: 25
@@ -1113,7 +1113,7 @@ export const pokemonData = [
         id: '112',
         type: ['ground', 'rock'],
         hp: 105,
-        attack: null,
+        attack: 88,
         attackSpecial: null,
         accuracy: null,
         speed: 40
@@ -1123,7 +1123,7 @@ export const pokemonData = [
         id: '113',
         type: 'normal',
         hp: 250,
-        attack: null,
+        attack: 20,
         attackSpecial: null,
         accuracy: null,
         speed: 50
@@ -1133,7 +1133,7 @@ export const pokemonData = [
         id: '114',
         type: 'grass',
         hp: 65,
-        attack: null,
+        attack: 78,
         attackSpecial: null,
         accuracy: null,
         speed: 60
@@ -1143,7 +1143,7 @@ export const pokemonData = [
         id: '115',
         type: 'normal',
         hp: 105,
-        attack: null,
+        attack: 68,
         attackSpecial: null,
         accuracy: null,
         speed: 90
@@ -1153,7 +1153,7 @@ export const pokemonData = [
         id: '116',
         type: 'water',
         hp: 30,
-        attack: null,
+        attack: 55,
         attackSpecial: null,
         accuracy: null,
         speed: 60
@@ -1163,7 +1163,7 @@ export const pokemonData = [
         id: '117',
         type: 'water',
         hp: 55,
-        attack: null,
+        attack: 80,
         attackSpecial: null,
         accuracy: null,
         speed: 85
@@ -1173,7 +1173,7 @@ export const pokemonData = [
         id: '118',
         type: 'water',
         hp: 45,
-        attack: null,
+        attack: 51,
         attackSpecial: null,
         accuracy: null,
         speed: 63
@@ -1183,7 +1183,7 @@ export const pokemonData = [
         id: '119',
         type: 'water',
         hp: 80,
-        attack: null,
+        attack: 79,
         attackSpecial: null,
         accuracy: null,
         speed: 68
@@ -1193,7 +1193,7 @@ export const pokemonData = [
         id: '120',
         type: 'water',
         hp: 30,
-        attack: null,
+        attack: 58,
         attackSpecial: null,
         accuracy: null,
         speed: 85
@@ -1203,7 +1203,7 @@ export const pokemonData = [
         id: '121',
         type: ['water', 'psychic'],
         hp: 60,
-        attack: null,
+        attack: 88,
         attackSpecial: null,
         accuracy: null,
         speed: 115
@@ -1213,7 +1213,7 @@ export const pokemonData = [
         id: '122',
         type: ['psychic', 'fairy'],
         hp: 40,
-        attack: null,
+        attack: 73,
         attackSpecial: null,
         accuracy: null,
         speed: 90
@@ -1223,7 +1223,7 @@ export const pokemonData = [
         id: '123',
         type: ['bug', 'flying'],
         hp: 70,
-        attack: null,
+        attack: 83,
         attackSpecial: null,
         accuracy: null,
         speed: 105
@@ -1233,7 +1233,7 @@ export const pokemonData = [
         id: '124',
         type: ['ice', 'psychic'],
         hp: 65,
-        attack: null,
+        attack: 83,
         attackSpecial: null,
         accuracy: null,
         speed: 95
@@ -1243,7 +1243,7 @@ export const pokemonData = [
         id: '125',
         type: 'electric',
         hp: 65,
-        attack: null,
+        attack: 89,
         attackSpecial: null,
         accuracy: null,
         speed: 105
@@ -1253,7 +1253,7 @@ export const pokemonData = [
         id: '126',
         type: 'fire',
         hp: 65,
-        attack: null,
+        attack: 98,
         attackSpecial: null,
         accuracy: null,
         speed: 93
@@ -1263,7 +1263,7 @@ export const pokemonData = [
         id: '127',
         type: 'bug',
         hp: 65,
-        attack: null,
+        attack: 90,
         attackSpecial: null,
         accuracy: null,
         speed: 85
@@ -1273,7 +1273,7 @@ export const pokemonData = [
         id: '128',
         type: 'normal',
         hp: 75,
-        attack: null,
+        attack: 70,
         attackSpecial: null,
         accuracy: null,
         speed: 110
@@ -1283,7 +1283,7 @@ export const pokemonData = [
         id: '129',
         type: 'water',
         hp: 20,
-        attack: null,
+        attack: 13,
         attackSpecial: null,
         accuracy: null,
         speed: 80
@@ -1293,7 +1293,7 @@ export const pokemonData = [
         id: '130',
         type: ['water', 'flying'],
         hp: 95,
-        attack: null,
+        attack: 93,
         attackSpecial: null,
         accuracy: null,
         speed: 81
@@ -1303,7 +1303,7 @@ export const pokemonData = [
         id: '131',
         type: ['water', 'ice'],
         hp: 130,
-        attack: null,
+        attack: 85,
         attackSpecial: null,
         accuracy: null,
         speed: 60
@@ -1313,7 +1313,7 @@ export const pokemonData = [
         id: '132',
         type: 'normal',
         hp: 48,
-        attack: null,
+        attack: 48,
         attackSpecial: null,
         accuracy: null,
         speed: 48
@@ -1323,7 +1323,7 @@ export const pokemonData = [
         id: '133',
         type: 'normal',
         hp: 55,
-        attack: null,
+        attack: 50,
         attackSpecial: null,
         accuracy: null,
         speed: 55
@@ -1333,7 +1333,7 @@ export const pokemonData = [
         id: '134',
         type: 'water',
         hp: 130,
-        attack: null,
+        attack: 88,
         attackSpecial: null,
         accuracy: null,
         speed: 65
@@ -1343,7 +1343,7 @@ export const pokemonData = [
         id: '135',
         type: 'electric',
         hp: 65,
-        attack: null,
+        attack: 88,
         attackSpecial: null,
         accuracy: null,
         speed: 130
@@ -1353,7 +1353,7 @@ export const pokemonData = [
         id: '136',
         type: 'fire',
         hp: 65,
-        attack: null,
+        attack: 113,
         attackSpecial: null,
         accuracy: null,
         speed: 65
@@ -1363,7 +1363,7 @@ export const pokemonData = [
         id: '137',
         type: 'normal',
         hp: 65,
-        attack: null,
+        attack: 73,
         attackSpecial: null,
         accuracy: null,
         speed: 40
@@ -1373,7 +1373,7 @@ export const pokemonData = [
         id: '138',
         type: ['rock', 'water'],
         hp: 35,
-        attack: null,
+        attack: 65,
         attackSpecial: null,
         accuracy: null,
         speed: 35
@@ -1383,7 +1383,7 @@ export const pokemonData = [
         id: '139',
         type: ['rock', 'water'],
         hp: 70,
-        attack: null,
+        attack: 88,
         attackSpecial: null,
         accuracy: null,
         speed: 55
@@ -1393,7 +1393,7 @@ export const pokemonData = [
         id: '140',
         type: ['rock', 'water'],
         hp: 30,
-        attack: null,
+        attack: 68,
         attackSpecial: null,
         accuracy: null,
         speed: 55
@@ -1403,7 +1403,7 @@ export const pokemonData = [
         id: '141',
         type: ['rock', 'water'],
         hp: 60,
-        attack: null,
+        attack: 90,
         attackSpecial: null,
         accuracy: null,
         speed: 80
@@ -1413,7 +1413,7 @@ export const pokemonData = [
         id: '142',
         type: ['rock', 'flying'],
         hp: 80,
-        attack: null,
+        attack: 83,
         attackSpecial: null,
         accuracy: null,
         speed: 130
@@ -1423,7 +1423,7 @@ export const pokemonData = [
         id: '143',
         type: 'normal',
         hp: 160,
-        attack: null,
+        attack: 88,
         attackSpecial: null,
         accuracy: null,
         speed: 30
@@ -1433,7 +1433,7 @@ export const pokemonData = [
         id: '144',
         type: ['ice', 'flying'],
         hp: 90,
-        attack: null,
+        attack: 90,
         attackSpecial: null,
         accuracy: null,
         speed: 85
@@ -1443,7 +1443,7 @@ export const pokemonData = [
         id: '145',
         type: ['electric', 'flying'],
         hp: 90,
-        attack: null,
+        attack: 108,
         attackSpecial: null,
         accuracy: null,
         speed: 100
@@ -1453,7 +1453,7 @@ export const pokemonData = [
         id: '146',
         type: ['fire', 'flying'],
         hp: 90,
-        attack: null,
+        attack: 113,
         attackSpecial: null,
         accuracy: null,
         speed: 90
@@ -1463,7 +1463,7 @@ export const pokemonData = [
         id: '147',
         type: 'dragon',
         hp: 41,
-        attack: null,
+        attack: 57,
         attackSpecial: null,
         accuracy: null,
         speed: 50
@@ -1473,7 +1473,7 @@ export const pokemonData = [
         id: '148',
         type: 'dragon',
         hp: 61,
-        attack: null,
+        attack: 77,
         attackSpecial: null,
         accuracy: null,
         speed: 70
@@ -1483,7 +1483,7 @@ export const pokemonData = [
         id: '149',
         type: ['dragon', 'flying'],
         hp: 91,
-        attack: null,
+        attack: 117,
         attackSpecial: null,
         accuracy: null,
         speed: 80
@@ -1493,7 +1493,7 @@ export const pokemonData = [
         id: '150',
         type: 'psychic',
         hp: 106,
-        attack: null,
+        attack: 132,
         attackSpecial: null,
         accuracy: null,
         speed: 130
@@ -1503,7 +1503,7 @@ export const pokemonData = [
         id: '151',
         type: 'psychic',
         hp: 100,
-        attack: null,
+        attack: 100,
         attackSpecial: null,
         accuracy: null,
         speed: 100
