@@ -1,8 +1,8 @@
-export let pokemonData = [
+export const pokemonData = [
     {
         name: 'Bulbasaur',
         id: '001',
-        type: ['grass','poison'],
+        type: ['grass', 'poison'],
         hp: 45,
         attack: null,
         attackSpecial: null,
@@ -12,7 +12,7 @@ export let pokemonData = [
     {
         name: 'Ivysaur',
         id: '002',
-        type: ['grass','poison'],
+        type: ['grass', 'poison'],
         hp: 60,
         attack: null,
         attackSpecial: null,
@@ -52,7 +52,7 @@ export let pokemonData = [
     {
         name: 'Charizard',
         id: '006',
-        type: ['fire','flying'],
+        type: ['fire', 'flying'],
         hp: 78,
         attack: 70,
         attackSpecial: null,
@@ -112,7 +112,7 @@ export let pokemonData = [
     {
         name: 'Buterfree',
         id: '012',
-        type: ['bug','flying'],
+        type: ['bug', 'flying'],
         hp: 60,
         attack: 60,
         attackSpecial: null,
@@ -122,7 +122,7 @@ export let pokemonData = [
     {
         name: 'Weedle',
         id: '013',
-        type: ['bug','poison'],
+        type: ['bug', 'poison'],
         hp: 40,
         attack: null,
         attackSpecial: null,
@@ -132,7 +132,7 @@ export let pokemonData = [
     {
         name: 'Kakuna',
         id: '014',
-        type: ['bug','poison'],
+        type: ['bug', 'poison'],
         hp: 45,
         attack: null,
         attackSpecial: null,
@@ -142,7 +142,7 @@ export let pokemonData = [
     {
         name: 'Beedrill',
         id: '015',
-        type: ['bug','poison'],
+        type: ['bug', 'poison'],
         hp: 65,
         attack: null,
         attackSpecial: null,
@@ -152,7 +152,7 @@ export let pokemonData = [
     {
         name: 'Pidgey',
         id: '016',
-        type: ['normal','flying'],
+        type: ['normal', 'flying'],
         hp: 40,
         attack: null,
         attackSpecial: null,
@@ -162,7 +162,7 @@ export let pokemonData = [
     {
         name: 'Pidgeotto',
         id: '017',
-        type: ['normal','flying'],
+        type: ['normal', 'flying'],
         hp: 63,
         attack: null,
         attackSpecial: null,
@@ -172,7 +172,7 @@ export let pokemonData = [
     {
         name: 'Pidgeot',
         id: '018',
-        type: ['normal','flying'],
+        type: ['normal', 'flying'],
         hp: 83,
         attack: null,
         attackSpecial: null,
@@ -202,7 +202,7 @@ export let pokemonData = [
     {
         name: 'Spearow',
         id: '021',
-        type: ['normal','flying'],
+        type: ['normal', 'flying'],
         hp: 40,
         attack: null,
         attackSpecial: null,
@@ -212,7 +212,7 @@ export let pokemonData = [
     {
         name: 'Fearow',
         id: '022',
-        type: ['normal','flying'],
+        type: ['normal', 'flying'],
         hp: 65,
         attack: null,
         attackSpecial: null,
@@ -332,13 +332,13 @@ export let pokemonData = [
     {
         name: 'Nidoking',
         id: '034',
-        type: ['poison','ground'],
+        type: ['poison', 'ground'],
         hp: 81,
         attack: null,
         attackSpecial: null,
         accuracy: null,
         speed: 85
-    },    
+    },
     {
         name: 'Clefairy',
         id: '035',
@@ -382,7 +382,7 @@ export let pokemonData = [
     {
         name: 'Jigglypuff',
         id: '039',
-        type: ['normal','fairy'],
+        type: ['normal', 'fairy'],
         hp: 115,
         attack: null,
         attackSpecial: null,
@@ -392,7 +392,7 @@ export let pokemonData = [
     {
         name: 'Wigglytuff',
         id: '040',
-        type: ['normal','fairy'],
+        type: ['normal', 'fairy'],
         hp: 140,
         attack: null,
         attackSpecial: null,
@@ -402,7 +402,7 @@ export let pokemonData = [
     {
         name: 'Zubat',
         id: '041',
-        type: ['poison','flying'],
+        type: ['poison', 'flying'],
         hp: 40,
         attack: null,
         attackSpecial: null,
@@ -412,7 +412,7 @@ export let pokemonData = [
     {
         name: 'Golbat',
         id: '042',
-        type: ['poison','flying'],
+        type: ['poison', 'flying'],
         hp: 75,
         attack: null,
         attackSpecial: null,
@@ -422,16 +422,16 @@ export let pokemonData = [
     {
         name: 'Oddish',
         id: '043',
-        type: ['grass','poison'],
+        type: ['grass', 'poison'],
         hp: 45,
         attack: null,
         attackSpecial: null,
         accuracy: null,
         speed: 30
-    },{
+    }, {
         name: 'Gloom',
         id: '044',
-        type: ['grass','poison'],
+        type: ['grass', 'poison'],
         hp: 60,
         attack: null,
         attackSpecial: null,
@@ -441,7 +441,7 @@ export let pokemonData = [
     {
         name: 'Vileplume',
         id: '045',
-        type: ['grass','poison'],
+        type: ['grass', 'poison'],
         hp: 75,
         attack: null,
         attackSpecial: null,
@@ -451,7 +451,7 @@ export let pokemonData = [
     {
         name: 'Paras',
         id: '046',
-        type: ['bug','grass'],
+        type: ['bug', 'grass'],
         hp: 35,
         attack: null,
         attackSpecial: null,
@@ -461,7 +461,7 @@ export let pokemonData = [
     {
         name: 'Parasect',
         id: '047',
-        type: ['bug','grass'],
+        type: ['bug', 'grass'],
         hp: 60,
         attack: null,
         attackSpecial: null,
@@ -471,7 +471,7 @@ export let pokemonData = [
     {
         name: 'Venonat',
         id: '048',
-        type: ['bug','poison'],
+        type: ['bug', 'poison'],
         hp: 60,
         attack: null,
         attackSpecial: null,
@@ -481,7 +481,7 @@ export let pokemonData = [
     {
         name: 'Venomoth',
         id: '049',
-        type: ['bug','poison'],
+        type: ['bug', 'poison'],
         hp: 70,
         attack: null,
         attackSpecial: null,
@@ -611,7 +611,7 @@ export let pokemonData = [
     {
         name: 'Poliwrath',
         id: '062',
-        type: ['water','fighting'],
+        type: ['water', 'fighting'],
         hp: 90,
         attack: null,
         attackSpecial: null,
@@ -681,7 +681,7 @@ export let pokemonData = [
     {
         name: 'Bellsprout',
         id: '069',
-        type: ['grass','poison'],
+        type: ['grass', 'poison'],
         hp: 50,
         attack: null,
         attackSpecial: null,
@@ -691,7 +691,7 @@ export let pokemonData = [
     {
         name: 'Weepinbell',
         id: '070',
-        type: ['grass','poison'],
+        type: ['grass', 'poison'],
         hp: 65,
         attack: null,
         attackSpecial: null,
@@ -701,7 +701,7 @@ export let pokemonData = [
     {
         name: 'Victreebel',
         id: '071',
-        type: ['grass','poison'],
+        type: ['grass', 'poison'],
         hp: 80,
         attack: null,
         attackSpecial: null,
@@ -711,7 +711,7 @@ export let pokemonData = [
     {
         name: 'Tentacool',
         id: '072',
-        type: ['water','poison'],
+        type: ['water', 'poison'],
         hp: 40,
         attack: null,
         attackSpecial: null,
@@ -721,7 +721,7 @@ export let pokemonData = [
     {
         name: 'Tentacruel',
         id: '073',
-        type: ['water','poison'],
+        type: ['water', 'poison'],
         hp: 80,
         attack: null,
         attackSpecial: null,
@@ -731,7 +731,7 @@ export let pokemonData = [
     {
         name: 'Geodude',
         id: '074',
-        type: ['rock','ground'],
+        type: ['rock', 'ground'],
         hp: 40,
         attack: null,
         attackSpecial: null,
@@ -741,7 +741,7 @@ export let pokemonData = [
     {
         name: 'Graveler',
         id: '075',
-        type: ['rock','ground'],
+        type: ['rock', 'ground'],
         hp: 55,
         attack: null,
         attackSpecial: null,
@@ -751,7 +751,7 @@ export let pokemonData = [
     {
         name: 'Golem',
         id: '076',
-        type: ['rock','ground'],
+        type: ['rock', 'ground'],
         hp: 80,
         attack: null,
         attackSpecial: null,
@@ -781,7 +781,7 @@ export let pokemonData = [
     {
         name: 'Slowpoke',
         id: '079',
-        type: ['water','psychic'],
+        type: ['water', 'psychic'],
         hp: 90,
         attack: null,
         attackSpecial: null,
@@ -791,7 +791,7 @@ export let pokemonData = [
     {
         name: 'Slowbro',
         id: '080',
-        type: ['water','psychic'],
+        type: ['water', 'psychic'],
         hp: 95,
         attack: null,
         attackSpecial: null,
@@ -801,7 +801,7 @@ export let pokemonData = [
     {
         name: 'Magnemite',
         id: '081',
-        type: ['electric','steel'],
+        type: ['electric', 'steel'],
         hp: 25,
         attack: null,
         attackSpecial: null,
@@ -811,7 +811,7 @@ export let pokemonData = [
     {
         name: 'Magneton',
         id: '082',
-        type: ['electric','steel'],
+        type: ['electric', 'steel'],
         hp: 50,
         attack: null,
         attackSpecial: null,
@@ -821,7 +821,7 @@ export let pokemonData = [
     {
         name: "Farfetch'd",
         id: '083',
-        type: ['normal','flying'],
+        type: ['normal', 'flying'],
         hp: 52,
         attack: null,
         attackSpecial: null,
@@ -831,7 +831,7 @@ export let pokemonData = [
     {
         name: 'Doduo',
         id: '084',
-        type: ['normal','flying'],
+        type: ['normal', 'flying'],
         hp: 35,
         attack: null,
         attackSpecial: null,
@@ -841,7 +841,7 @@ export let pokemonData = [
     {
         name: 'Dodrio',
         id: '085',
-        type: ['normal','flying'],
+        type: ['normal', 'flying'],
         hp: 60,
         attack: null,
         attackSpecial: null,
@@ -861,7 +861,7 @@ export let pokemonData = [
     {
         name: 'Dewgong',
         id: '087',
-        type: ['water','ice'],
+        type: ['water', 'ice'],
         hp: 90,
         attack: null,
         attackSpecial: null,
@@ -901,7 +901,7 @@ export let pokemonData = [
     {
         name: 'Cloyster',
         id: '091',
-        type: ['water','ice'],
+        type: ['water', 'ice'],
         hp: 50,
         attack: null,
         attackSpecial: null,
@@ -911,7 +911,7 @@ export let pokemonData = [
     {
         name: 'Gastly',
         id: '092',
-        type: ['ghost','poison'],
+        type: ['ghost', 'poison'],
         hp: 30,
         attack: null,
         attackSpecial: null,
@@ -921,7 +921,7 @@ export let pokemonData = [
     {
         name: 'Hunter',
         id: '093',
-        type: ['ghost','poison'],
+        type: ['ghost', 'poison'],
         hp: 45,
         attack: null,
         attackSpecial: null,
@@ -931,7 +931,7 @@ export let pokemonData = [
     {
         name: 'Gengar',
         id: '094',
-        type: ['ghost','poison'],
+        type: ['ghost', 'poison'],
         hp: 60,
         attack: null,
         attackSpecial: null,
@@ -941,7 +941,7 @@ export let pokemonData = [
     {
         name: 'Onix',
         id: '095',
-        type: ['rock','ground'],
+        type: ['rock', 'ground'],
         hp: 35,
         attack: null,
         attackSpecial: null,
@@ -1011,7 +1011,7 @@ export let pokemonData = [
     {
         name: 'Exeggcute',
         id: '102',
-        type: ['grass','psychic'],
+        type: ['grass', 'psychic'],
         hp: 60,
         attack: null,
         attackSpecial: null,
@@ -1021,7 +1021,7 @@ export let pokemonData = [
     {
         name: 'Exeggutor',
         id: '103',
-        type: ['grass','psychic'],
+        type: ['grass', 'psychic'],
         hp: 95,
         attack: null,
         attackSpecial: null,
@@ -1101,7 +1101,7 @@ export let pokemonData = [
     {
         name: 'Rhyhorn',
         id: '111',
-        type: ['ground','rock'],
+        type: ['ground', 'rock'],
         hp: 80,
         attack: null,
         attackSpecial: null,
@@ -1111,7 +1111,7 @@ export let pokemonData = [
     {
         name: 'Rhydon',
         id: '112',
-        type: ['ground','rock'],
+        type: ['ground', 'rock'],
         hp: 105,
         attack: null,
         attackSpecial: null,
@@ -1201,7 +1201,7 @@ export let pokemonData = [
     {
         name: 'Starmie',
         id: '121',
-        type: ['water','psychic'],
+        type: ['water', 'psychic'],
         hp: 60,
         attack: null,
         attackSpecial: null,
@@ -1211,7 +1211,7 @@ export let pokemonData = [
     {
         name: 'Mr. Mime',
         id: '122',
-        type: ['psychic','fairy'],
+        type: ['psychic', 'fairy'],
         hp: 40,
         attack: null,
         attackSpecial: null,
@@ -1221,7 +1221,7 @@ export let pokemonData = [
     {
         name: 'Scyther',
         id: '123',
-        type: ['bug','flying'],
+        type: ['bug', 'flying'],
         hp: 70,
         attack: null,
         attackSpecial: null,
@@ -1231,7 +1231,7 @@ export let pokemonData = [
     {
         name: 'Jynx',
         id: '124',
-        type: ['ice','psychic'],
+        type: ['ice', 'psychic'],
         hp: 65,
         attack: null,
         attackSpecial: null,
@@ -1276,7 +1276,7 @@ export let pokemonData = [
         attack: null,
         attackSpecial: null,
         accuracy: null,
-        speed: 110 
+        speed: 110
     },
     {
         name: 'Magikarp',
@@ -1291,7 +1291,7 @@ export let pokemonData = [
     {
         name: 'Gyarados',
         id: '130',
-        type: ['water','flying'],
+        type: ['water', 'flying'],
         hp: 95,
         attack: null,
         attackSpecial: null,
@@ -1301,7 +1301,7 @@ export let pokemonData = [
     {
         name: 'Lapras',
         id: '131',
-        type: ['water','ice'],
+        type: ['water', 'ice'],
         hp: 130,
         attack: null,
         attackSpecial: null,
@@ -1361,7 +1361,7 @@ export let pokemonData = [
     {
         name: 'Porygon',
         id: '137',
-        type:'normal',
+        type: 'normal',
         hp: 65,
         attack: null,
         attackSpecial: null,
@@ -1371,7 +1371,7 @@ export let pokemonData = [
     {
         name: 'Omanyte',
         id: '138',
-        type: ['rock','water'],
+        type: ['rock', 'water'],
         hp: 35,
         attack: null,
         attackSpecial: null,
@@ -1381,7 +1381,7 @@ export let pokemonData = [
     {
         name: 'Omastar',
         id: '139',
-        type: ['rock','water'],
+        type: ['rock', 'water'],
         hp: 70,
         attack: null,
         attackSpecial: null,
@@ -1391,7 +1391,7 @@ export let pokemonData = [
     {
         name: 'Kabuto',
         id: '140',
-        type: ['rock','water'],
+        type: ['rock', 'water'],
         hp: 30,
         attack: null,
         attackSpecial: null,
@@ -1401,7 +1401,7 @@ export let pokemonData = [
     {
         name: 'Kabutops',
         id: '141',
-        type: ['rock','water'],
+        type: ['rock', 'water'],
         hp: 60,
         attack: null,
         attackSpecial: null,
@@ -1411,7 +1411,7 @@ export let pokemonData = [
     {
         name: 'Aerodactyl',
         id: '142',
-        type: ['rock','flying'],
+        type: ['rock', 'flying'],
         hp: 80,
         attack: null,
         attackSpecial: null,
@@ -1431,7 +1431,7 @@ export let pokemonData = [
     {
         name: 'Articuno',
         id: '144',
-        type: ['ice','flying'],
+        type: ['ice', 'flying'],
         hp: 90,
         attack: null,
         attackSpecial: null,
@@ -1441,7 +1441,7 @@ export let pokemonData = [
     {
         name: 'Zapdos',
         id: '145',
-        type: ['electric','flying'],
+        type: ['electric', 'flying'],
         hp: 90,
         attack: null,
         attackSpecial: null,
@@ -1451,7 +1451,7 @@ export let pokemonData = [
     {
         name: 'Moltres',
         id: '146',
-        type: ['fire','flying'],
+        type: ['fire', 'flying'],
         hp: 90,
         attack: null,
         attackSpecial: null,
@@ -1481,7 +1481,7 @@ export let pokemonData = [
     {
         name: 'Dragonite',
         id: '149',
-        type: ['dragon','flying'],
+        type: ['dragon', 'flying'],
         hp: 91,
         attack: null,
         attackSpecial: null,
