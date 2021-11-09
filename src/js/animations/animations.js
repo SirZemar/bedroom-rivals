@@ -27,17 +27,18 @@ Keyframes.define([{
     '75%': { opacity: 0 },
     '100%': { opacity: 1 }
 }, {
+    name: 'fadeOut',
+    '25%': { opacity: 0 },
+    '100%': { opacity: 0 }
+}, {
     name: 'playerTitleSlide',
     '50%': { opacity: 0, transform: "translate(500px)" },
     '55%': { transform: "translate(-300px)" },
     '100%': { transform: "translate(0)" }
+}, {
+    name: 'playerTitleSlideOut',
+    '50%': { opacity: 0, transform: "translate(500px)" },
+    '100%': { opacity: 0, transform: "translate(500px)" }
 }])
 
 
-// Arena 
-
-keyframes.define([{
-    name: 'speedTransition',
-    '0%': { width: '0%' },
-    '100%': { width: '100%' }
-}])

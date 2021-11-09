@@ -15,9 +15,7 @@ export class Anime {
                     easing: 'linear',
                     duration: currentSpeedMs,
                     loop: true,
-                    autoplay: false,
-                    loopComplete: function (anim) {
-                    }
+                    autoplay: false
                 });
 
                 return speedBarOne;
@@ -29,12 +27,7 @@ export class Anime {
                     easing: 'linear',
                     duration: currentSpeedMs,
                     loop: true,
-                    autoplay: false,
-                    loopComplete: function (anim) {
-                    },
-                    update: function (anim) {
-
-                    }
+                    autoplay: false
                 });
                 return speedBarTwo;
         }

@@ -4,8 +4,8 @@ import { Anima } from './animations';
 import { Arena } from '../classes/arena';
 
 export class Animations {
-    constructor(){
-       
+    constructor() {
+
     }
 
     static playerOneSelectAll(grid, pokedexList, pokedexTeamList, pokedexPlayerTitle) {
@@ -48,8 +48,8 @@ export class Animations {
     }
 
     static playerTwoSelectAll(grid, pokedexList, pokedexTeamList, pokedexPlayerTitle) {
-        
-        grid.play( ['gridLoop 1s linear 2s','gridJump2 3s'], {
+
+        grid.play(['gridLoop 1s linear 2s', 'gridJump2 3s'], {
             onStart: () => {
                 setTimeout(() => {
                     $('.pokedex').css('display', 'none');
@@ -60,20 +60,20 @@ export class Animations {
         });
 
         pokedexList.play({
-            name: 'fadeOutAndIn',
-            duration: '6s',
+            name: 'fadeOut',
+            duration: '3s',
             timingFunction: 'ease'
         });
 
         pokedexTeamList.play({
-            name: 'fadeOutAndIn',
-            duration: '6s',
+            name: 'fadeOut',
+            duration: '3s',
             timingFunction: 'ease'
         });
 
         pokedexPlayerTitle.play({
-            name: 'playerTitleSlide',
-            duration: '6s',
+            name: 'playerTitleSlideOut',
+            duration: '3s',
             timingFunction: 'ease'
         });
 
@@ -81,5 +81,5 @@ export class Animations {
     }
 
 
-    
+
 }
