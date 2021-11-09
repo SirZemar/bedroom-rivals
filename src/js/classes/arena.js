@@ -22,13 +22,11 @@ export class Arena {
         this.teamOneMaxHp = {};
         this.teamTwoMaxHp = {};
 
-        this.speedBarAnimationOne = new Keyframes(document.getElementById('sp-player-one'));
-        this.speedBarAnimationTwo = new Keyframes(document.getElementById('sp-player-two'));
-
         this.timeOutOne = false;
         this.timeOutTwo = false;
-        this.dateOne = null;
-        this.dateTwo = null;
+
+        /*   this.dateOne = null;
+          this.dateTwo = null; */
 
         this.speedBarOne = null;
         this.speedBarOne = null;
@@ -38,12 +36,12 @@ export class Arena {
     }
 
     setPokemons() {
-        this.playerOneArray.forEach((pokemon) => {
-            this.teamOne.push(pokemon.pokemon);
+        this.playerOneArray.forEach((pokemonCard) => {
+            this.teamOne.push(pokemonCard.pokemon);
         });
 
-        this.playerTwoArray.forEach((pokemon) => {
-            this.teamTwo.push(pokemon.pokemon);
+        this.playerTwoArray.forEach((pokemonCard) => {
+            this.teamTwo.push(pokemonCard.pokemon);
         });
 
     }
@@ -63,15 +61,15 @@ export class Arena {
     }
 
     displayTeams() {
-        this.playerOneArray.forEach((pokemonArr) => {
-            if (!pokemonArr.pokemon.captain === true) {
-                pokemonArr.appendToElement($('#bench-player-one'), 'arena__main__bench-list');
+        this.playerOneArray.forEach((pokemonCard) => {
+            if (!pokemonCard.pokemon.captain === true) {
+                pokemonCard.appendToElement($('#bench-player-one'), 'arena__main__bench-list');
             }
         });
 
-        this.playerTwoArray.forEach((pokemonArr) => {
-            if (!pokemonArr.pokemon.captain === true) {
-                pokemonArr.appendToElement($('#bench-player-two'), 'arena__main__bench-list');
+        this.playerTwoArray.forEach((pokemonCard) => {
+            if (!pokemonCard.pokemon.captain === true) {
+                pokemonCard.appendToElement($('#bench-player-two'), 'arena__main__bench-list');
             }
         });
     }
@@ -195,7 +193,7 @@ export class Arena {
         }
     }
 
-    timeOutButton() { //needs refactor
+    timeOutButton() {
 
         $('#time-out-one').on('click', (event) => {
 
@@ -216,10 +214,6 @@ export class Arena {
 
                 // Enales other player time-out button
                 $('#time-out-two').css({ 'pointer-events': '', 'opacity': '1' });
-
-                // attack if nothing change (temp)
-                // this.currentHealth('player-one', 200);
-
 
                 // Restarts
                 if (this.speedPausedOne) {
@@ -250,9 +244,6 @@ export class Arena {
 
                 // Enales other player time-out button
                 $('#time-out-one').css({ 'pointer-events': '', 'opacity': '1' });
-
-                // attack if nothing change (temp)
-                // this.currentHealth('player-two', 200);
 
                 // Restarts
                 if (this.speedPausedTwo) {
@@ -288,7 +279,6 @@ export class Arena {
     }
 
     animationSpeedPlay(player) {
-        console.log(this.speedBarOne)
         switch (player) {
             case 'player-one':
                 this.speedBarOne.play();
@@ -342,7 +332,7 @@ export class Arena {
                         return
                     } else {
                         //attack
-                        this.currentHealth(player, 200)
+                        this.currentHealth(player, this.captainOneTeam.attack);
                     }
 
                 }
@@ -358,6 +348,9 @@ export class Arena {
                         $('#time-out-one').css({ 'pointer-events': 'none', 'opacity': '0.5' });
 
                         this.speedPausedTwo = true;
+                    } else {
+                        //attack
+                        this.currentHealth(player, this.captainTwoTeam.attack);
                     }
                 }
                 break;
