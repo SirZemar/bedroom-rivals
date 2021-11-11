@@ -1,5 +1,6 @@
-import $ from 'jquery';
+import $, { event } from 'jquery';
 import { Pokemon } from './pokemon';
+import { pokemonImagesArray } from "../images/pokemon-images";
 import { PokemonCard } from "../ui/pokemon-card";
 import Keyframes from '@keyframes/core';
 import { Anima } from '../animations/animations';
@@ -31,92 +32,127 @@ export class Pokedex {
 
         // Create pokedex DOM
         for (let pokemon of this.pokedexArray) {
+            //images
+            pokemon.img = pokemonImagesArray.filter(image => image.includes(`pokemon${pokemon.id}`))[0];
+
             const pokemonCard = new PokemonCard(pokemon);
             pokemonCard.appendToElement($('.pokedex__list'), 'pokedex__list');
+
+            // Clicks
+            this.pokedexCardOnClick(pokemonCard)
         }
-
-        // Makes all cards clickable
-        document.querySelectorAll('.pokedex__list__card-container').forEach(pokedexCard => {
-            pokedexCard.addEventListener("click", () => {
-                this.pickPokemon(pokedexCard);
-
-            });
-        })
-
 
         this.nextButton();
 
     }
 
+    pokedexCardOnClick(pokemonCard) {
+        pokemonCard.element[0].addEventListener('click', () => {
+            this.pickPokemon(pokemonCard.pokemon, pokemonCard.element[0])
+        });
+    }
 
-    pickPokemon(pokedexCard) {
+    pickPokemon(pokemon, pokemonCardEl) {
 
-        if (this.team.length < 6 && !$(pokedexCard).hasClass('picked-up')) {
+        if (this.team.length < 6 && !$(pokemonCardEl).hasClass('picked-up')) {
 
-            //Find pokemon selected and create new card for selected pokemon
-            const pokemonName = pokedexCard.querySelector('.pokedex__list__card__name').innerHTML;
-            const selectedPokemon = this.pokedexArray.filter(pokemon => pokemon.name === pokemonName)[0];
+            // Add animation for selected pokemon in pokedex
+            $(pokemonCardEl).addClass('picked-up');
 
-            const newSelectedPokemon = new Pokemon(selectedPokemon.name, selectedPokemon.id, selectedPokemon.type, selectedPokemon.hp * 20, selectedPokemon.attack, selectedPokemon.attackSpecial, selectedPokemon.accuracy, selectedPokemon.speed);
+            // Create selected pokemon cards
+            const selectedPokemonCard = new PokemonCard(pokemon);
 
-            const pokemonCard = new PokemonCard(newSelectedPokemon);
+            selectedPokemonCard.appendToElement($('.pokedex__team-list'), 'pokedex__team-list');
 
-            pokemonCard.appendToElement($('.pokedex__team-list'), 'pokedex__team-list');
+            //temp
+            const arenaPokemonCard = new PokemonCard(new Pokemon(pokemon.name, pokemon.id, pokemon.type, pokemon.hp * 20, pokemon.attack, pokemon.defense, pokemon.accuracy, pokemon.speed, pokemon.img));
+            arenaPokemonCard.pokemon.captain = false;
 
             // Append check radio and by default first selected is captain
-            const selectedPokemonNameElement = $("p.pokedex__team-list__card__name", pokemonCard.element);
+            const pokemonNameElement = $("p.pokedex__team-list__card__name", selectedPokemonCard.element);
 
-            $(selectedPokemonNameElement).after(`<label class="pokedex__team-list__card__radio"><input class="pokedex__team-list__card__radio__captain" type="radio" name="captain"></input></label>`);
+            $(pokemonNameElement).after(`<label class="pokedex__team-list__card__radio"><input class="pokedex__team-list__card__radio__captain" type="radio" name="captain"></input></label>`);
 
             if (this.team.length === 0) {
                 $('.pokedex__team-list__card__radio__captain').attr('checked', 'checked');
-                pokemonCard.pokemon.captain = true;
+                arenaPokemonCard.pokemon.captain = true;
             }
 
-            // Add animation for selected pokemon in pokedex
-            $(pokedexCard).addClass('picked-up');
-
             // Add card element to this.team array
-            this.team.push(pokemonCard);
+            this.team.push(arenaPokemonCard);
 
+            this.setCaptain(selectedPokemonCard, arenaPokemonCard)
             // Add event clicker to selected card to be removed if wished
-            this.eventListeners(pokemonCard, pokedexCard);
+            this.eventListeners(selectedPokemonCard, arenaPokemonCard, pokemonCardEl);
 
         }
     }
 
-    eventListeners(cardSelected, pokedexCard) {
+    setCaptain(selectedPokemonCard, arenaPokemonCard) {
 
-        $(cardSelected.element).on("click", (event) => {
+        /*       switch (rule) {
+                  case 'first pick':
+                      break;
+                  case 'onChange':
+                      break;
+                  case 'onRemoved':
+                      break;
+              }
+              let isCaptain = $('.pokedex__team-list__card__radio__captain', selectedPokemonCard.element)[0].checked;
+      
+              if (isCaptain && this.team.length > 0) {
+                  this.team[0].pokemon.captain = true;
+              }
+              arenaPokemonCard.pokemkkon.captain = false; */
+
+    }
+
+    eventListeners(selectedPokemonCard, arenaPokemonCard, pokemonCardEl) {
+
+        $(selectedPokemonCard.element).on("click", (event) => {
 
             if (!$(event.target).is(".pokedex__team-list__card__radio__captain")) {
 
-                //Remove from DOM
-                $(cardSelected.element).remove();
 
                 // Remove from this.team array
-                const arrayIndex = this.team.findIndex(element => element.element[0] === cardSelected);
+                const arrayIndex = this.team.findIndex(card => card === arenaPokemonCard);
                 this.team.splice(arrayIndex, 1);
 
                 //Remove "picked-up" class
-                $(pokedexCard).removeClass('picked-up');
+                $(pokemonCardEl).removeClass('picked-up');
 
+
+                let isCaptain = $('.pokedex__team-list__card__radio__captain', selectedPokemonCard.element)[0].checked;
+
+                //Remove from DOM
+                $(selectedPokemonCard.element).remove();
+
+                // captain
+                if (isCaptain && this.team.length > 0) {
+                    isCaptain = false;
+                    const radioElStr = '.pokedex__team-list li:first-child .pokedex__team-list__card__radio__captain';
+                    $(radioElStr).attr('checked', 'checked');
+                    $(radioElStr)[0].checked = true;
+                    this.team[0].pokemon.captain = true;
+                }
+
+                arenaPokemonCard.pokemkkon.captain = false;
             }
 
         });
 
-        $(cardSelected.element[0]).find('.pokedex__team-list__card__radio__captain').on('change', (event) => {
+        $(selectedPokemonCard.element[0]).find('.pokedex__team-list__card__radio__captain').on('change', (event) => {
 
+            document.querySelectorAll('.pokedex__team-list__card__radio__captain').forEach(e => e.removeAttribute('checked'))
             // All captain to false
             this.team.forEach((card) => {
                 card.pokemon.captain = false;
             })
 
-            // Selected is captain
-            if ($(event.target).is(':checked')) {
+            $(event.currentTarget).attr('checked', 'checked')
 
-                cardSelected.pokemon.captain = true
-            }
+            // Selected is captain
+            arenaPokemonCard.pokemon.captain = true
 
         });
 
@@ -155,6 +191,7 @@ export class Pokedex {
                 } else if (this.playerOneTeam.length === 6 && this.playerTwoTeam.length === 6) {
 
                     // Activate animations 
+
                     Animations.playerTwoSelectAll(gridAnimation, pokedexListAnimation, pokedexTeamListAnimation, pokedexPlayerTitleAnimation);
 
                     this.done();

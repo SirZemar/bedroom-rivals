@@ -12,13 +12,13 @@ export class PokemonCard extends BaseElement {
     this.pokemon = pokemon;
   }
 
-  getImage() {
-    const pokemonImage = pokemonImagesArray.filter(image => image.includes(`pokemon${this.pokemon.id}`));
-
-    this.pokemon.img = pokemonImage[0];
-
-    return pokemonImage;
-  }
+  /*  getImage() {
+     const pokemonImage = pokemonImagesArray.filter(image => image.includes(`pokemon${this.pokemon.id}`));
+ 
+     this.pokemon.img = pokemonImage[0];
+ 
+     return pokemonImage;
+   } */
 
   getTypeImg() {
 
@@ -45,15 +45,42 @@ export class PokemonCard extends BaseElement {
     }
   }
 
+  getStats(stat) {
+    switch (stat) {
+      case 'attack':
+        const attack = this.pokemon.attack;
+        const attackLevel = Math.round((attack * 10) / 132);
+        return attackLevel;
+      case 'endurance':
+        const defense = this.pokemon.defense;
+        const hp = this.pokemon.hp;
+        let enduranceLevel = Math.round((((defense + hp) / 2) * 10) / 124);
+        return enduranceLevel;
+      case 'speed':
+        const speed = this.pokemon.speed;
+        const speedLevel = Math.round((speed * 10) / 150);
+        return speedLevel;
+    }
+  }
+
   getElementString() {
 
     // Get argument from arguments array
     const className = arguments[0][0][1];
 
+    const swordImg = statsIcons.filter((img) => img.includes('attack'));
+    const heartImg = statsIcons.filter((img) => img.includes('endurance'));
+    const timeImg = statsIcons.filter((img) => img.includes('speed'));
+
+    let statOverTopStyle = '';
+    if (this.getStats('endurance') == 10 && this.getStats('endurance') !== 10) {
+      statOverTopStyle = `style="color: red;"`;
+    }
+
     return `
             <li class="${className}__card-container base-card-container">
               <div class="${className}__card base-card">
-                <img class="${className}__card__image base-card__image" src="${this.getImage()}"
+                <img class="${className}__card__image base-card__image" src="${this.pokemon.img}"
                   alt="${this.pokemon.name}">
                 <p class="${className}__card__name base-card__name">${this.pokemon.name}</p>
                 <div class="${className}__card__type base-card__type">
@@ -61,16 +88,16 @@ export class PokemonCard extends BaseElement {
                 </div>
                 <div class="${className}__card__stats-container base-card__stats-container">
                   <div class="${className}__card__stats base-card__stats">
-                    <img class="${className}__card__stats__icon base-card__stats__icon" src="${statsIcons[2]}">
-                    <span class="${className}__card__stats__value base-card__stats__value">5</span> 
+                    <img class="${className}__card__stats__icon base-card__stats__icon" src="${swordImg}">
+                    <span class="${className}__card__stats__value base-card__stats__value">${this.getStats('attack')}</span> 
                   </div>
                   <div class="${className}__card__stats base-card__stats">
-                    <img class="${className}__card__stats__icon base-card__stats__icon" src="${statsIcons[1]}">
-                    <span class="${className}__card__stats__value base-card__stats__value">5</span>
+                    <img class="${className}__card__stats__icon base-card__stats__icon" src="${heartImg}">
+                    <span class="${className}__card__stats__value base-card__stats__value" ${statOverTopStyle} >${this.getStats('endurance')}</span>
                   </div>
                   <div class="${className}__card__stats base-card__stats">
-                    <img class="${className}__card__stats__icon base-card__stats__icon" src="${statsIcons[0]}">
-                    <span class="${className}__card__stats__value base-card__stats__value">5</span>
+                    <img class="${className}__card__stats__icon base-card__stats__icon" src="${timeImg}">
+                    <span class="${className}__card__stats__value base-card__stats__value">${this.getStats('speed')}</span>
                   </div>
                 </div>
               </div>

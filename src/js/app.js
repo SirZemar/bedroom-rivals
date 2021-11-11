@@ -21,6 +21,9 @@ pokedex.createPokedex();
 
 export function arenaLoad() {
 
+        const playerOne = 'player-one';
+        const playerTwo = 'player-two';
+
         const playerOneTeam = pokedex.getPlayerOneTeam();
         const playerTwoTeam = pokedex.getPlayerTwoTeam();
 
@@ -38,8 +41,6 @@ export function arenaLoad() {
 
         arena.itemBag();
 
-        const playerOne = 'player-one';
-        const playerTwo = 'player-two';
 
         arena.entryStatus(playerOne);
         arena.entryStatus(playerTwo);

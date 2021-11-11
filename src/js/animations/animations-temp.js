@@ -27,7 +27,9 @@ export class Animations {
         }, {
             onStart: () => {
                 setTimeout(() => {
-                    $('.pokedex__team-list-container').css('order', '-1');
+                    $('.pokedex__team-list-container').css('order', '1');
+                    document.querySelector('.pokedex__list li:first-child').scrollIntoView();
+
                 }, 1500);
             }
         });

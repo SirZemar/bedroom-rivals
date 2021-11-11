@@ -91,7 +91,6 @@ export class Arena {
     pokemonActiveOne() {
         // Image
         const imageStr = this.captainOneTeam.img;
-
         $('#captain-image-one').attr('src', imageStr);
 
         // Name
