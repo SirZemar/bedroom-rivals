@@ -73,61 +73,49 @@ export class Pokedex {
 
             $(pokemonNameElement).after(`<label class="pokedex__team-list__card__radio"><input class="pokedex__team-list__card__radio__captain" type="radio" name="captain"></input></label>`);
 
-            if (this.team.length === 0) {
-                $('.pokedex__team-list__card__radio__captain').attr('checked', 'checked');
-                arenaPokemonCard.pokemon.captain = true;
-            }
+            this.setCaptain('first pick', arenaPokemonCard);
 
             // Add card element to this.team array
             this.team.push(arenaPokemonCard);
 
-            this.setCaptain(selectedPokemonCard, arenaPokemonCard)
             // Add event clicker to selected card to be removed if wished
-            this.eventListeners(selectedPokemonCard, arenaPokemonCard, pokemonCardEl);
+            this.selectedCardsEventListeners(selectedPokemonCard, arenaPokemonCard, pokemonCardEl);
 
         }
     }
 
-    setCaptain(selectedPokemonCard, arenaPokemonCard) {
+    setCaptain(rule, arenaPokemonCard, selectedPokemonCard = undefined, radioInputTargetEvent = undefined) {
 
-        /*       switch (rule) {
-                  case 'first pick':
-                      break;
-                  case 'onChange':
-                      break;
-                  case 'onRemoved':
-                      break;
-              }
-              let isCaptain = $('.pokedex__team-list__card__radio__captain', selectedPokemonCard.element)[0].checked;
-      
-              if (isCaptain && this.team.length > 0) {
-                  this.team[0].pokemon.captain = true;
-              }
-              arenaPokemonCard.pokemkkon.captain = false; */
+        switch (rule) {
+            case 'first pick':
+                //First selected pokemon comes selected as captain by default
+                if (this.team.length === 0) {
+                    $('.pokedex__team-list__card__radio__captain').attr('checked', 'checked');
+                    arenaPokemonCard.pokemon.captain = true;
+                }
+                break;
+            case 'onChange':
+                // All radio check attr to false
+                document.querySelectorAll('.pokedex__team-list__card__radio__captain').forEach(e => e.removeAttribute('checked'));
 
-    }
+                // All captain to false
+                this.team.forEach((card) => {
+                    card.pokemon.captain = false;
+                });
 
-    eventListeners(selectedPokemonCard, arenaPokemonCard, pokemonCardEl) {
+                $(radioInputTargetEvent.currentTarget).attr('checked', 'checked');
 
-        $(selectedPokemonCard.element).on("click", (event) => {
-
-            if (!$(event.target).is(".pokedex__team-list__card__radio__captain")) {
-
-
-                // Remove from this.team array
-                const arrayIndex = this.team.findIndex(card => card === arenaPokemonCard);
-                this.team.splice(arrayIndex, 1);
-
-                //Remove "picked-up" class
-                $(pokemonCardEl).removeClass('picked-up');
-
-
+                // Selected is captain
+                arenaPokemonCard.pokemon.captain = true
+                break;
+            case 'onRemoved':
                 let isCaptain = $('.pokedex__team-list__card__radio__captain', selectedPokemonCard.element)[0].checked;
 
-                //Remove from DOM
-                $(selectedPokemonCard.element).remove();
-
-                // captain
+                //Pokemon removed if captain becomes false
+                if (isCaptain) {
+                    arenaPokemonCard.pokemon.captain = false;
+                }
+                //Captain switches to first selected pokemon in line if captain is removed
                 if (isCaptain && this.team.length > 0) {
                     isCaptain = false;
                     const radioElStr = '.pokedex__team-list li:first-child .pokedex__team-list__card__radio__captain';
@@ -135,24 +123,42 @@ export class Pokedex {
                     $(radioElStr)[0].checked = true;
                     this.team[0].pokemon.captain = true;
                 }
+                break;
+        }
+    }
 
-                arenaPokemonCard.pokemkkon.captain = false;
-            }
+    removeSelectedPokemon(selectedPokemonCard, arenaPokemonCard, pokemonCardEl, event) {
+        const radioInputTarget = $(event.target).is(".pokedex__team-list__card__radio__captain");
+
+        if (!radioInputTarget) {
+
+            // Remove from this.team array
+            const arrayIndex = this.team.findIndex(card => card === arenaPokemonCard);
+            this.team.splice(arrayIndex, 1);
+
+            //Remove "picked-up" class
+            $(pokemonCardEl).removeClass('picked-up');
+
+            //Remove from DOM
+            $(selectedPokemonCard.element).remove();
+
+            // captain
+            this.setCaptain('onRemoved', arenaPokemonCard, selectedPokemonCard)
+
+        }
+    }
+
+    selectedCardsEventListeners(selectedPokemonCard, arenaPokemonCard, pokemonCardEl) {
+
+        $(selectedPokemonCard.element).on("click", (event) => {
+
+            this.removeSelectedPokemon(selectedPokemonCard, arenaPokemonCard, pokemonCardEl, event);
 
         });
 
         $(selectedPokemonCard.element[0]).find('.pokedex__team-list__card__radio__captain').on('change', (event) => {
 
-            document.querySelectorAll('.pokedex__team-list__card__radio__captain').forEach(e => e.removeAttribute('checked'))
-            // All captain to false
-            this.team.forEach((card) => {
-                card.pokemon.captain = false;
-            })
-
-            $(event.currentTarget).attr('checked', 'checked')
-
-            // Selected is captain
-            arenaPokemonCard.pokemon.captain = true
+            this.setCaptain('onChange', arenaPokemonCard, undefined, event)
 
         });
 
