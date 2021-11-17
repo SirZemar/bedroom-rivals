@@ -29,21 +29,15 @@ export function arenaLoad() {
 
         const arena = new Arena(playerOneTeam, playerTwoTeam);
 
-
-        arena.setPokemons();
-        arena.maxHealth();
-
-        arena.displayTeams();
+        // arena.setPokemons();
 
         arena.setActive();
-        arena.pokemonActiveOne();
-        arena.pokemonActiveTwo();
+        arena.displayTeams();
+
+        arena.displayPokemonActive(playerOne);
+        arena.displayPokemonActive(playerTwo);
 
         arena.itemBag();
-
-
-        arena.entryStatus(playerOne);
-        arena.entryStatus(playerTwo);
 
         arena.animationBarSpeed();
 
@@ -53,8 +47,6 @@ export function arenaLoad() {
         arena.animationSpeedOnComplete(playerOne);
         arena.animationSpeedOnComplete(playerTwo);
 
-        arena.timeOutButton();
-
-        //attack simulation (temp)
-        // setTimeout(() => {arena.currentHealth('player-two',1000)}, 5000)
+        arena.timeOutButtonOnClick();
+        // arena.timeOutButton();
 }

@@ -1,9 +1,6 @@
 import { BaseElement } from "./base-element";
-import { pokemonImagesArray } from "../images/pokemon-images";
 import { statsIcons } from "../images/stats-icons";
 import { pokemonTypes } from "../images/pokemon-type";
-import { PokemonDataService } from "../services/data-service";
-import { Pokemon } from "../classes/pokemon";
 
 export class PokemonCard extends BaseElement {
 
@@ -12,13 +9,6 @@ export class PokemonCard extends BaseElement {
     this.pokemon = pokemon;
   }
 
-  /*  getImage() {
-     const pokemonImage = pokemonImagesArray.filter(image => image.includes(`pokemon${this.pokemon.id}`));
- 
-     this.pokemon.img = pokemonImage[0];
- 
-     return pokemonImage;
-   } */
 
   getTypeImg() {
 
