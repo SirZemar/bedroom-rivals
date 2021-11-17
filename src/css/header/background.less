@@ -1,0 +1,71 @@
+svg {
+  position: absolute;
+  width: 500%;
+  height: 155px;
+  transform: translate3d(-1100px, -2px, -1000px);
+  margin: 0;
+  padding: 0;
+  display: block;
+  background: hsl(200, 70%, 15%);
+}
+
+#p {
+  fill: black;
+  fill-opacity: 0.2;
+  stroke: white;
+  stroke-width: 2.3px;
+  stroke-dasharray: 200 188.5;
+  animation: stroke-color 11s infinite linear;
+}
+
+#p .wrapper,
+#p use {
+  animation: draw 4s infinite linear;
+
+}
+
+#p use:nth-child(3) {
+  fill: white;
+  fill-opacity: 0.1;
+  animation-delay: -2s;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 388.5;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke-color {
+  0% {
+    stroke: hsl(0, 100%, 70%);
+  }
+
+  16.667% {
+    stroke: hsl(60, 100%, 70%);
+  }
+
+  33.333% {
+    stroke: hsl(120, 100%, 70%);
+  }
+
+  50% {
+    stroke: hsl(180, 100%, 70%);
+  }
+
+  66.667% {
+    stroke: hsl(240, 100%, 70%);
+  }
+
+  83.333% {
+    stroke: hsl(300, 100%, 70%);
+  }
+
+  100% {
+    stroke: hsl(360, 100%, 70%);
+  }
+}

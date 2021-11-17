@@ -1,9 +1,19 @@
+/* temp */
+
+.teste-lay {
+    position: absolute;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: -1px;
+}
 
 .arena {
     height: 100%;
     overflow: hidden;
     display: none;
 }
+
 .arena__main-container {
     display: flex;
     align-items: center;
@@ -21,7 +31,7 @@
 .arena__main::-webkit-scrollbar {
     width: 0;
     /* Remove scrollbar space */
-  }
+}
 
 .arena__main__bench {
     flex-basis: 25%;
@@ -34,12 +44,51 @@
     flex-wrap: wrap;
     margin: 0;
     height: inherit;
-    max-height: inherit ;
+    max-height: inherit;
 }
 
 .arena__main__bench-list__card-container {
     width: calc(100% / 2);
     height: calc(100% / 3);
+}
+
+.arena__main__bench-list__card.base-card {
+    grid-template: "d d e"20% "a a f"45% "c c c"20% "b b b"12% "g g g"3% / 40% 15% 45%;
+}
+
+.arena__main__bench-list__card__type.base-card__type {
+    grid-area: d;
+}
+
+.arena__main__bench-list__card__image.base-card__image {}
+
+.arena__main__bench-list__hp.hp {
+    position: relative;
+    grid-area: b;
+    border-radius: 5px;
+    margin: 0;
+    border: none;
+    box-shadow: 0 0 0 1px grey;
+    height: 90%;
+}
+
+.arena__main__bench-list__special.arena__combat__special-bar {
+    grid-area: g;
+    height: 90%;
+    width: 80%;
+    justify-self: center;
+}
+
+.arena__main__bench-list__special.arena__combat__special-bar .progress {
+    border: none;
+    box-shadow: 0 0 0 1px grey;
+}
+
+.arena__main__bench-list__hp .hp-bar {}
+
+.arena__main__bench-list__card__name.base-card__name {
+    grid-area: c;
+    font-size: 1rem;
 }
 
 .arena__main__bench-list__card-container:hover {
@@ -53,15 +102,15 @@
     border: 1px solid yellow;
     height: calc(100% - 10px);
     margin: 5px;
-}
-
-.arena__main__bench-list__card__backpack {
     padding: 5px;
 }
 
 /* -------------------------------- */
+
 /*            Combat               */
+
 /* ------------------------------ */
+
 /* 
 .combat-container {
     flex-basis: 50%;
@@ -72,7 +121,6 @@
     height: 100%;
 } */
 
-
 .arena__combat-container {
     flex-basis: 50%;
     display: flex;
@@ -82,14 +130,9 @@
     height: 100%;
 }
 
-
 .arena__combat {
     display: grid;
-    grid-template: 
-        "a b b" 10%
-        "a c c" 25%
-        "a d e" 25%
-        "a f g" 40% / 35% 50% 15%;
+    grid-template: "a b b" 10% "a c c" 25% "a d e" 25% "a f g" 40% / 35% 50% 15%;
     height: 100%;
     width: 100%;
     flex-basis: 50%;
@@ -98,8 +141,6 @@
 .arena__combat.rotation-x-y>* {
     transform: rotateY(180deg) rotateX(180deg)
 }
-
-
 
 .arena__combat__image {
     grid-area: a;
@@ -147,16 +188,14 @@
     border-radius: 0 0 3px 3px;
 }
 
-.arena__combat__special-bar{
+.arena__combat__special-bar {
     align-self: center;
     height: 30%;
     /* width: 80%; */
     grid-area: d;
 }
 
-.arena__combat__special-bar__progress {
-
-}
+.arena__combat__special-bar__progress {}
 
 .arena__combat__special-bar__progress__one {
     background-color: yellow;
@@ -178,10 +217,10 @@
     width: 80%;
     border: 2px solid black;
     border-radius: 10px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     background-color: transparent;
     color: white;
-    line-height: 40px;
+    line-height: 35px;
     box-shadow: 0 0 10px 2px red;
     text-shadow: 0 0 20px orange;
     text-transform: uppercase;
@@ -211,14 +250,11 @@
 }
 
 .arena__combat__time-button.selected {
-    box-shadow:  inset 0 0 20px 7px rgb(187, 170, 17), 0 0 5px 1px red; 
+    box-shadow: inset 0 0 20px 7px rgb(187, 170, 17), 0 0 5px 1px red;
     transition: none;
 }
 
-
-.player-combat {
-
-}
+.player-combat {}
 
 #fight {
     padding: 10px 20px

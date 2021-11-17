@@ -1,0 +1,198 @@
+.pokedex {
+  margin: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  /* display: none; */
+}
+
+.pokedex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/*----------------------------------------------*/
+
+/*                   Main                      */
+
+/*--------------------------------------------*/
+
+.pokedex-main {
+  display: flex;
+  flex-basis: calc(100vh);
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+/*----------------------------------------------*/
+
+/*                 Pokedex List                */
+
+/*--------------------------------------------*/
+
+.pokedex__list-container {
+  flex-basis: 70%;
+}
+
+.pokedex__list {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100% - 40px);
+  margin: 20px;
+  border: 1px solid red;
+  overflow-y: scroll;
+}
+
+.pokedex__list::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+}
+
+/*-----------------Pokedex Cards----------------*/
+
+.base-card-container {
+  width: calc(100%/7);
+  height: calc(100%/4);
+  min-height: 175px;
+  border: 1px solid green;
+  padding: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.base-card-container:hover {
+  box-shadow: 0 0 5px 2px white;
+}
+
+.base-card-container.picked-up {
+  background-color: rgb(10, 1, 49);
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+.base-card {
+  display: grid;
+  position: relative;
+  grid-template: "d d d"20% "a a c"60% "b b b"20% / 30% 30% 40%;
+  margin: 5px;
+  height: calc(100% - 10px);
+  border: 1px solid yellow;
+  padding: 5px;
+}
+
+.base-card__image {
+  align-self: center;
+  justify-self: center;
+  max-width: 100%;
+  max-height: 100%;
+  grid-area: a;
+}
+
+.base-card__name {
+  grid-area: b;
+  color: white;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+
+.base-card__type {
+  grid-area: d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-icon {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+
+.base-card__stats-container {
+  grid-area: c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.base-card__stats {
+  display: flex;
+  align-items: center;
+}
+
+.base-card__stats__icon {
+  margin: 0;
+  margin-right: 5px;
+  width: 15px;
+}
+
+.base-card__stats__value {
+  color: white;
+  font-size: 0.7rem;
+}
+
+@media (min-width: 1400px) {
+  .pokemon-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .base-card__stats__icon {
+    margin: 0;
+    margin-right: 5px;
+    width: 20px;
+  }
+  .base-card__stats__value {
+    font-size: 1.4rem;
+  }
+}
+
+/*-----------------Pokedex Team----------------*/
+
+.pokedex__team-list-container {
+  flex-basis: 30%;
+}
+
+.pokedex__team-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: calc(100% - 40px);
+  margin: 20px;
+  border: 1px solid red;
+  overflow-y: scroll;
+  font-size: 1.5rem;
+}
+
+.pokedex__team-list::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+}
+
+.pokedex__team-list__card-container {
+  width: calc(100%/2);
+  height: calc(100%/3);
+  min-height: 180px;
+  border: 1px solid green;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.pokedex__team-list__card__radio {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  margin: 0;
+}
+
+.pokedex__team-list__card__radio input[type="radio"] {
+  transform: scale(1.5);
+}
