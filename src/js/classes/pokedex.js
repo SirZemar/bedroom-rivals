@@ -6,6 +6,7 @@ import Keyframes from '@keyframes/core';
 import { Anima } from '../animations/animations';
 import { Animations } from '../animations/animations-temp';
 import { arenaLoad } from '../app';
+import { ArenaPokemonCard } from '../ui/arena-pokemon-card';
 
 export class Pokedex {
 
@@ -65,7 +66,8 @@ export class Pokedex {
             selectedPokemonCard.appendToElement($('.pokedex__team-list'), 'pokedex__team-list');
 
             //temp
-            const arenaPokemonCard = new PokemonCard(new Pokemon(pokemon.name, pokemon.id, pokemon.type, pokemon.hp * 20, pokemon.attack, pokemon.defense, pokemon.accuracy, pokemon.speed, pokemon.img));
+            const arenaPokemon = new Pokemon(pokemon.name, pokemon.id, pokemon.type, 1500 + pokemon.hp * 5, pokemon.attack, pokemon.defense, pokemon.accuracy, pokemon.speed, pokemon.img, pokemon.maxHP)
+            const arenaPokemonCard = new ArenaPokemonCard(arenaPokemon);
             arenaPokemonCard.pokemon.captain = false;
 
             // Append check radio and by default first selected is captain
