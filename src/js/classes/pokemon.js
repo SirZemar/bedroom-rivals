@@ -1,6 +1,6 @@
 export class Pokemon {
 
-    constructor(name, id, type, hp, attack, defense, accuracy, speed, img) {
+    constructor(name, id, type, hp, attack, defense, accuracy, speed, img, maxHP) {
         this.name = name;
         this.id = id;
         this.type = type;
@@ -10,6 +10,7 @@ export class Pokemon {
         this.accuracy = accuracy;
         this.speed = speed;
         this.img = img;
+        this.maxHP = hp;
     };
 
 }
