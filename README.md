@@ -8,4 +8,4 @@
 
 <hr>
 
-Open this project <a href="">Here</a> <span style="font-weight: bold">(soon)</span>
+Open this project <a href="">Here</a> (soon)
