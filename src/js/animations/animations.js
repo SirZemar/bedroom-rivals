@@ -49,6 +49,10 @@ Keyframes.define([{
     '0%': { backgroundColor: "var(--playerOne)" },
     '100%': { backgroundColor: "var(--playerTwo)" }
 
+}, {
+    name: 'slideUp',
+    '0%': { transform: "translateY(0)" },
+    '100%': { transform: "translateY(-100vh)" }
 }])
 
 

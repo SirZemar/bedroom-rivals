@@ -3,7 +3,21 @@ import { DataService } from './services/data-service';
 import { Pokedex } from './classes/pokedex';
 import { pokedexData } from './pokemon-data';
 import { Arena } from './classes/arena';
+import { GameOpening } from './ui/game-opening';
+import { Animations } from './animations/animations-temp';
 
+const gameOpening = new GameOpening;
+
+gameOpening.appendToElement($('.game'));
+
+// temporary only 1 v 1 option
+const option1v1 = document.getElementById('option-1v1');
+
+// option1v1.addEventListener('click', () => $(".opening").addClass("hidden"));
+option1v1.addEventListener('click', () => {
+        Animations.openingSlideOff(gameOpening.element[0])
+        console.log(gameOpening.element[0])
+});
 
 // Gets all data base and creates an array of all pokemon
 const dataService = new DataService();

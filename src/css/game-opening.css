@@ -1,0 +1,50 @@
+:root {
+    --options-bt: rgb(236, 43, 43);
+}
+
+.opening {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    background-color: var(--primaryDark);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opening__logo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.opening__logo__title {}
+
+.opening__logo__subtitle {}
+
+.opening .button-container {
+    width: auto;
+}
+
+.opening .button-container .button.v19 {
+    width: 150px;
+}
+
+.opening .button-container .button.v19 .label {
+    width: 100%;
+    text-align: center;
+}
+
+.opening .button-container .button.v19 .icon2 {
+    background: var(--options-bt);
+}
+
+.opening .button-container .button.v19 .icon::before, .opening .button-container .button.v19 .icon::after {
+    background: var(--options-bt);
+}
+
+.opening .button-container .button.v19 .icon span::before, .opening .button-container .button.v19 .icon span::after {
+    background: var(--options-bt);
+}

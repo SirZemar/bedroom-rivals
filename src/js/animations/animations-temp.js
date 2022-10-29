@@ -95,4 +95,16 @@ export class Animations {
         })
     }
 
+    static openingSlideOff(openingEl) {
+        const opening = new Keyframes(openingEl);
+        opening.play({
+            name: 'slideUp',
+            duration: '1s',
+            timingFunction: 'ease'
+        }, {
+            onEnd: () => {
+                $(openingEl).addClass("hidden");
+            }
+        })
+    }
 }
