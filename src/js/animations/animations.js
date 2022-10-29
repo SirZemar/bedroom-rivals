@@ -1,4 +1,4 @@
-import keyframes from '@keyframes/core';
+import Keyframes from '@keyframes/core';
 
 // Pokedex grid animation after "Next" button click
 
@@ -39,6 +39,16 @@ Keyframes.define([{
     name: 'playerTitleSlideOut',
     '50%': { opacity: 0, transform: "translate(500px)" },
     '100%': { opacity: 0, transform: "translate(500px)" }
+}, {
+    name: 'powerLevelCapBlink',
+    '0%': { color: "var(--quaternaryLightest)" },
+    '20%': { color: "red" },
+    '100%': { color: "var(--quaternaryLightest)" }
+}, {
+    name: 'headerColorChange',
+    '0%': { backgroundColor: "var(--playerOne)" },
+    '100%': { backgroundColor: "var(--playerTwo)" }
+
 }])
 
 

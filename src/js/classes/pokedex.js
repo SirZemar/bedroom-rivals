@@ -15,6 +15,8 @@ export class Pokedex {
         this.team = [];
         this.playerOneTeam = [];
         this.playerTwoTeam = [];
+        this.teamPowerLevel = 0;
+        this.teamPowerLevelMax = 1750;
     }
 
     set setPokedexArrayData(pokedex) {
@@ -41,10 +43,44 @@ export class Pokedex {
 
             // Clicks
             this.pokedexCardOnClick(pokemonCard)
+
+            // Search bar event
+            this.searchPokemon(pokemonCard);
+
+            // Power level cap
+            this.powerLevelCap();
         }
 
-        this.nextButton();
+        const gridAnimation = document.querySelector('.grid');
+        const pokedexListAnimation = document.querySelector('.pokedex__list-container');
+        const pokedexTeamListAnimation = document.querySelector('.pokedex__team-list-container');
+        const pokedexPlayerTitleAnimation = document.querySelector('.pokedex__header__nav__text');
+        const pokedexPlayerHeaderAnimation = document.querySelector('.pokedex__header__nav');
 
+        const playerTransitionAnimations = new Animations(gridAnimation, pokedexListAnimation, pokedexTeamListAnimation, pokedexPlayerTitleAnimation, pokedexPlayerHeaderAnimation)
+        this.nextButton(playerTransitionAnimations);
+
+    }
+
+    searchPokemon(pokemonCard) {
+        const searchBar = document.querySelector(".pokedex__list__search > input ");
+        searchBar.addEventListener("input", (e) => {
+            if (!pokemonCard.pokemon.name.toLowerCase().includes(e.target.value.toLowerCase())) {
+                pokemonCard.element.addClass("hidden");
+            } else {
+                pokemonCard.element.removeClass("hidden");
+            }
+        })
+    }
+
+    powerLevelCap() {
+        const powerLevelBoard = document.querySelector(".pokedex__team-list__power");
+        this.teamPowerLevel = 0;
+        this.team.forEach((pokemonCard) => {
+            this.teamPowerLevel += pokemonCard.pokemon.powerLevel;
+        })
+        console.log(this.teamPowerLevel)
+        powerLevelBoard.innerHTML = `Power Level ${this.teamPowerLevel}/${this.teamPowerLevelMax} `;
     }
 
     pokedexCardOnClick(pokemonCard) {
@@ -57,32 +93,45 @@ export class Pokedex {
 
         if (this.team.length < 6 && !$(pokemonCardEl).hasClass('picked-up')) {
 
-            // Add animation for selected pokemon in pokedex
-            $(pokemonCardEl).addClass('picked-up');
+            if (pokemon.powerLevel + this.teamPowerLevel < this.teamPowerLevelMax) {
+                // Add animation for selected pokemon in pokedex
+                $(pokemonCardEl).addClass('picked-up');
 
-            // Create selected pokemon cards
-            const selectedPokemonCard = new PokemonCard(pokemon);
+                // Create selected pokemon cards
+                const selectedPokemonCard = new PokemonCard(pokemon);
 
-            selectedPokemonCard.appendToElement($('.pokedex__team-list'), 'pokedex__team-list');
+                selectedPokemonCard.appendToElement($('.pokedex__team-list'), 'pokedex__team-list');
 
-            //temp
-            const arenaPokemon = new Pokemon(pokemon.name, pokemon.id, pokemon.type, 1500 + pokemon.hp * 5, pokemon.attack, pokemon.defense, pokemon.accuracy, pokemon.speed, pokemon.img, pokemon.maxHP)
-            const arenaPokemonCard = new ArenaPokemonCard(arenaPokemon);
-            arenaPokemonCard.pokemon.captain = false;
+                //temp
+                const arenaPokemon = new Pokemon(pokemon.name, pokemon.id, pokemon.type, 1500 + pokemon.hp * 5, pokemon.attack, pokemon.defense, pokemon.accuracy, pokemon.speed, pokemon.img, pokemon.baseStatHp = pokemon.hp);
+                const arenaPokemonCard = new ArenaPokemonCard(arenaPokemon);
+                arenaPokemonCard.pokemon.captain = false;
+                console.log(arenaPokemon)
 
-            // Append check radio and by default first selected is captain
-            const pokemonNameElement = $("p.pokedex__team-list__card__name", selectedPokemonCard.element);
+                // Append check radio and by default first selected is captain
+                const pokemonNameElement = $("p.pokedex__team-list__card__name", selectedPokemonCard.element);
 
-            $(pokemonNameElement).after(`<label class="pokedex__team-list__card__radio"><input class="pokedex__team-list__card__radio__captain" type="radio" name="captain"></input></label>`);
+                $(pokemonNameElement).after(`<label class="pokedex__team-list__card__radio"><input class="pokedex__team-list__card__radio__captain" type="radio" name="captain"></input></label>`);
 
-            this.setCaptain('first pick', arenaPokemonCard);
+                this.setCaptain('first pick', arenaPokemonCard);
 
-            // Add card element to this.team array
-            this.team.push(arenaPokemonCard);
+                // Add card element to this.team array
+                this.team.push(arenaPokemonCard);
 
-            // Add event clicker to selected card to be removed if wished
-            this.selectedCardsEventListeners(selectedPokemonCard, arenaPokemonCard, pokemonCardEl);
+                // Add event clicker to selected card to be removed if wished
+                this.selectedCardsEventListeners(selectedPokemonCard, arenaPokemonCard, pokemonCardEl);
 
+                // Update team power level cap
+                this.powerLevelCap();
+
+            } else {
+                const powerLevelBoard = document.querySelector(".pokedex__team-list__power");
+                /*  $(powerLevelBoard).css({ "color": "red" });
+                 setTimeout(() => {
+                     $(powerLevelBoard).css({ "color": "black" });
+                 }, 1000) */
+                Animations.powerLevel(powerLevelBoard);
+            }
         }
     }
 
@@ -147,6 +196,8 @@ export class Pokedex {
             // captain
             this.setCaptain('onRemoved', arenaPokemonCard, selectedPokemonCard)
 
+            // Update team power level cap
+            this.powerLevelCap();
         }
     }
 
@@ -166,7 +217,7 @@ export class Pokedex {
 
     }
 
-    nextButton() {
+    nextButton(animations) {
         $("#next-bt").on('click', () => {
             if (this.team.length === 6) {
 
@@ -185,22 +236,21 @@ export class Pokedex {
                 $('.pokedex__team-list__card-container').remove();
                 $('.pokedex__list__card-container').removeClass('picked-up');
 
-                const gridAnimation = new Keyframes(document.querySelector('.grid'));
-                const pokedexListAnimation = new Keyframes(document.querySelector('.pokedex__list-container'));
-                const pokedexTeamListAnimation = new Keyframes(document.querySelector('.pokedex__team-list-container'));
-                const pokedexPlayerTitleAnimation = new Keyframes(document.querySelector('.pokedex__header__nav__text'));
-
+                // Update team power level cap
+                setTimeout(() => {
+                    this.powerLevelCap();
+                }, 1500);
 
                 if (!(this.playerOneTeam.length === 6 && this.playerTwoTeam.length === 6)) {
 
                     // Activate animations 
-                    Animations.playerOneSelectAll(gridAnimation, pokedexListAnimation, pokedexTeamListAnimation, pokedexPlayerTitleAnimation);
+                    animations.playerOneSelectAll();
 
                 } else if (this.playerOneTeam.length === 6 && this.playerTwoTeam.length === 6) {
 
                     // Activate animations 
 
-                    Animations.playerTwoSelectAll(gridAnimation, pokedexListAnimation, pokedexTeamListAnimation, pokedexPlayerTitleAnimation);
+                    animations.playerTwoSelectAll();
 
                     this.done();
                 }

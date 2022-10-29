@@ -1,26 +1,27 @@
 import $, { speed } from 'jquery';
-import keyframes from '@keyframes/core';
+import Keyframes from '@keyframes/core';
 import { Anima } from './animations';
 import { Arena } from '../classes/arena';
 
 export class Animations {
-    constructor() {
-
+    constructor(gridEl, pokedexListEl, pokedexTeamListEl, pokedexPlayerTitleEl, pokedexPlayerHeaderAnimation) {
+        this.grid = new Keyframes(gridEl);
+        this.pokedexList = new Keyframes(pokedexListEl);
+        this.pokedexTeamList = new Keyframes(pokedexTeamListEl);
+        this.pokedexPlayerTitle = new Keyframes(pokedexPlayerTitleEl);
+        this.pokedexPlayerHeaderAnimation = new Keyframes(pokedexPlayerHeaderAnimation);
     }
 
-    static playerOneSelectAll(grid, pokedexList, pokedexTeamList, pokedexPlayerTitle) {
+    playerOneSelectAll() {
+        this.grid.play('gridJump 3s');
 
-
-        grid.play('gridJump 3s');
-
-        pokedexList.play({
+        this.pokedexList.play({
             name: 'fadeOutAndIn',
             duration: '3s',
             timingFunction: 'ease'
         });
 
-
-        pokedexTeamList.play({
+        this.pokedexTeamList.play({
             name: 'fadeOutAndIn',
             duration: '3s',
             timingFunction: 'ease'
@@ -29,13 +30,18 @@ export class Animations {
                 setTimeout(() => {
                     $('.pokedex__team-list-container').css('order', '1');
                     document.querySelector('.pokedex__list li:first-child').scrollIntoView();
+                    this.pokedexPlayerHeaderAnimation.play({
+                        name: 'headerColorChange',
+                        duration: '3s',
+                        timingFunction: 'ease'
+                    })
 
                 }, 1500);
             }
         });
 
 
-        pokedexPlayerTitle.play({
+        this.pokedexPlayerTitle.play({
             name: 'playerTitleSlide',
             duration: '3s',
             timingFunction: 'ease'
@@ -49,9 +55,8 @@ export class Animations {
 
     }
 
-    static playerTwoSelectAll(grid, pokedexList, pokedexTeamList, pokedexPlayerTitle) {
-
-        grid.play(['gridLoop 1s linear 2s', 'gridJump2 3s'], {
+    playerTwoSelectAll() {
+        this.grid.play(['gridLoop 1s linear 2s', 'gridJump2 3s'], {
             onStart: () => {
                 setTimeout(() => {
                     $('.pokedex').css('display', 'none');
@@ -61,27 +66,33 @@ export class Animations {
             }
         });
 
-        pokedexList.play({
+        this.pokedexList.play({
             name: 'fadeOut',
             duration: '3s',
             timingFunction: 'ease'
         });
 
-        pokedexTeamList.play({
+        this.pokedexTeamList.play({
             name: 'fadeOut',
             duration: '3s',
             timingFunction: 'ease'
         });
 
-        pokedexPlayerTitle.play({
+        this.pokedexPlayerTitle.play({
             name: 'playerTitleSlideOut',
             duration: '3s',
             timingFunction: 'ease'
         });
 
-
     }
 
-
+    static powerLevel(powerLevelCapEl) {
+        const powerLevelCap = new Keyframes(powerLevelCapEl);
+        powerLevelCap.play({
+            name: 'powerLevelCapBlink',
+            duration: '1s',
+            timingFunction: 'ease'
+        })
+    }
 
 }
