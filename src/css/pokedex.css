@@ -113,11 +113,15 @@
   box-shadow: none;
 }
 
+.base-card-container.power-cap-limit .base-card__power {
+  color: red;
+}
+
 .base-card {
   display: grid;
   position: relative;
   grid-template:
-    "d d d"15% "a a c"60% "b b b"15% "e e e"10% / 30% 30% 40%;
+    "d d d"18% "a a c"58% "b b b"13% "e e e"11% / 30% 30% 40%;
   margin: 5px;
   height: calc(100% - 10px);
   border: 1px solid yellow;
@@ -139,12 +143,12 @@
   text-align: center;
   font-weight: bold;
   letter-spacing: 1px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .base-card__power {
   grid-area: e;
-  color: white;
+  color: yellow;
   margin: 0;
   text-align: center;
   font-size: 0.9rem;
@@ -168,6 +172,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100%;
   overflow: hidden;
 }
@@ -175,6 +180,7 @@
 .base-card__stats {
   display: flex;
   align-items: center;
+  height: 33%;
 }
 
 .base-card__stats__icon {

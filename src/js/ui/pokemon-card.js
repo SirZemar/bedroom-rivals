@@ -11,7 +11,6 @@ export class PokemonCard extends BaseElement {
 
 
   getTypeImg() {
-
     // If there is more than one type
     if (this.pokemon.type instanceof Array) {
 
@@ -73,7 +72,7 @@ export class PokemonCard extends BaseElement {
                 <img class="${className}__card__image base-card__image" src="${this.pokemon.img}"
                   alt="${this.pokemon.name}">
                 <p class="${className}__card__name base-card__name">${this.pokemon.name}</p>
-                <p class="${className}__card__name base-card__power">(${this.pokemon.powerLevel})</p>
+                <p class="${className}__card__name base-card__power">(Power lvl ${this.pokemon.powerLevel})</p>
                 <div class="${className}__card__type base-card__type">
                   ${this.getTypeImg()}
                 </div>

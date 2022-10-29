@@ -12,6 +12,7 @@ export class Pokedex {
 
     constructor() {
         this.pokedexArray = [];
+        this.pokemonCardArray = [];
         this.team = [];
         this.playerOneTeam = [];
         this.playerTwoTeam = [];
@@ -41,6 +42,8 @@ export class Pokedex {
             const pokemonCard = new PokemonCard(pokemon);
             pokemonCard.appendToElement($('.pokedex__list'), 'pokedex__list');
 
+            // Pokemon Card Array shoud have more use !!!!!!!!!!!!!!!
+            this.pokemonCardArray.push(pokemonCard);
             // Clicks
             this.pokedexCardOnClick(pokemonCard)
 
@@ -60,6 +63,7 @@ export class Pokedex {
         const playerTransitionAnimations = new Animations(gridAnimation, pokedexListAnimation, pokedexTeamListAnimation, pokedexPlayerTitleAnimation, pokedexPlayerHeaderAnimation)
         this.nextButton(playerTransitionAnimations);
 
+        console.log(this.pokemonCardArray)
     }
 
     searchPokemon(pokemonCard) {
@@ -79,8 +83,20 @@ export class Pokedex {
         this.team.forEach((pokemonCard) => {
             this.teamPowerLevel += pokemonCard.pokemon.powerLevel;
         })
-        console.log(this.teamPowerLevel)
         powerLevelBoard.innerHTML = `Power Level ${this.teamPowerLevel}/${this.teamPowerLevelMax} `;
+    }
+
+    powerLevelDisplayVisualHelp() {
+        for (let pokemonCard of this.pokemonCardArray) {
+
+            const pokemonCardEl = pokemonCard.element[0];
+
+            if (this.teamPowerLevelMax - this.teamPowerLevel < pokemonCard.pokemon.powerLevel) {
+                $(pokemonCardEl).addClass('power-cap-limit');
+            } else {
+                $(pokemonCardEl).removeClass('power-cap-limit');
+            }
+        }
     }
 
     pokedexCardOnClick(pokemonCard) {
@@ -124,12 +140,11 @@ export class Pokedex {
                 // Update team power level cap
                 this.powerLevelCap();
 
+                // Update visual power level help
+                this.powerLevelDisplayVisualHelp();
+
             } else {
                 const powerLevelBoard = document.querySelector(".pokedex__team-list__power");
-                /*  $(powerLevelBoard).css({ "color": "red" });
-                 setTimeout(() => {
-                     $(powerLevelBoard).css({ "color": "black" });
-                 }, 1000) */
                 Animations.powerLevel(powerLevelBoard);
             }
         }
@@ -198,6 +213,9 @@ export class Pokedex {
 
             // Update team power level cap
             this.powerLevelCap();
+
+            // Update visual power level help
+            this.powerLevelDisplayVisualHelp();
         }
     }
 
@@ -236,9 +254,11 @@ export class Pokedex {
                 $('.pokedex__team-list__card-container').remove();
                 $('.pokedex__list__card-container').removeClass('picked-up');
 
-                // Update team power level cap
                 setTimeout(() => {
+                    // Update power level
                     this.powerLevelCap();
+                    // Update visual power level help
+                    this.powerLevelDisplayVisualHelp();
                 }, 1500);
 
                 if (!(this.playerOneTeam.length === 6 && this.playerTwoTeam.length === 6)) {
