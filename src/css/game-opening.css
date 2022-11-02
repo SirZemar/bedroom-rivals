@@ -3,7 +3,8 @@
 }
 
 .opening {
-    height: 100vh;
+    height: 140vh;
+    top: -20vh;
     width: 100vw;
     z-index: 1000;
     background-color: var(--primaryDark);
