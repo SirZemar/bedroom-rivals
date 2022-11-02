@@ -4,6 +4,7 @@ import { Pokedex } from './classes/pokedex';
 import { pokedexData } from './pokemon-data';
 import { Arena } from './classes/arena';
 import { GameOpening } from './ui/game-opening';
+import { ArenaPause } from './ui/arena-pause';
 import { Animations } from './animations/animations-temp';
 
 const gameOpening = new GameOpening;
@@ -35,6 +36,11 @@ pokedex.createPokedex();
 
 export function arenaLoad() {
 
+        // Arena pause player buttons ready
+        const arenaPause = new ArenaPause();
+        arenaPause.appendToElement($('.game'));
+
+
         const playerOne = 'player-one';
         const playerTwo = 'player-two';
 
@@ -54,9 +60,9 @@ export function arenaLoad() {
         arena.itemBag();
 
         arena.animationBarSpeed();
-
-        arena.animationSpeedPlay(playerOne);
-        arena.animationSpeedPlay(playerTwo);
+        // Ready players start speed bar
+        arena.setPlayerReadyButtonEvent(playerOne);
+        arena.setPlayerReadyButtonEvent(playerTwo);
 
         arena.animationSpeedOnComplete(playerOne);
         arena.animationSpeedOnComplete(playerTwo);

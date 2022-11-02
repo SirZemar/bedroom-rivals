@@ -61,7 +61,8 @@ export class Animations {
                 setTimeout(() => {
                     $('.pokedex').css('display', 'none');
                     $('.arena').css('display', 'block');
-                    grid.reset().then(grid.play('gridLoop 1s linear infinite'));
+                    $('.arena-pause').css('visibility', 'visible');
+                    this.grid.reset().then(this.grid.play('gridLoop 1s linear infinite'));
                 }, 3000);
             }
         });
@@ -99,8 +100,8 @@ export class Animations {
         const opening = new Keyframes(openingEl);
         opening.play({
             name: 'slideUp',
-            duration: '1s',
-            timingFunction: 'ease'
+            duration: '0.5s',
+            timingFunction: 'cubic-bezier(0,-0.02,.65,-0.7)'
         }, {
             onEnd: () => {
                 $(openingEl).addClass("hidden");

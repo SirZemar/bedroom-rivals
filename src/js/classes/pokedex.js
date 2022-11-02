@@ -7,6 +7,7 @@ import { Anima } from '../animations/animations';
 import { Animations } from '../animations/animations-temp';
 import { arenaLoad } from '../app';
 import { ArenaPokemonCard } from '../ui/arena-pokemon-card';
+import { set } from 'animejs';
 
 export class Pokedex {
 
@@ -62,8 +63,6 @@ export class Pokedex {
 
         const playerTransitionAnimations = new Animations(gridAnimation, pokedexListAnimation, pokedexTeamListAnimation, pokedexPlayerTitleAnimation, pokedexPlayerHeaderAnimation)
         this.nextButton(playerTransitionAnimations);
-
-        console.log(this.pokemonCardArray)
     }
 
     searchPokemon(pokemonCard) {

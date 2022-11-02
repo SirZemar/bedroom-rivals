@@ -29,6 +29,45 @@ export class Arena {
          */
         this.speedPausedOne = null;
         this.speedPausedTwo = null;
+
+        this.playerOneStr = 'player-one';
+        this.playerTwoStr = 'player-two';
+        this.playerOneReady = false;
+        this.playerTwoReady = false;
+    }
+
+    setPlayerReadyButtonEvent(player) {
+        const playerReady = () => {
+            $(`.arena-pause__buttons__${player}__button-ready`).removeClass('hidden');
+            $(`.arena-pause__buttons__${player}__button-ready`).addClass('ready');
+            $(`.arena-pause__buttons__${player}`).addClass('ready');
+
+            switch (player) {
+                case 'player-one':
+                    this.playerOneReady = true;
+                    break;
+                case 'player-two':
+                    this.playerTwoReady = true;
+                    break;
+            }
+            if (this.playerOneReady && this.playerTwoReady) {
+                const countdownEL = document.querySelector('.arena-pause__buttons__countdown');
+                let count = 3;
+                countdownEL.innerHTML = count;
+                const countdown = setInterval(() => {
+                    count -= 1;
+                    countdownEL.innerHTML = count;
+                    if (count == 0) {
+                        this.animationSpeedPlay(this.playerOneStr);
+                        this.animationSpeedPlay(this.playerTwoStr);
+                        clearInterval(countdown);
+                        $('.arena-pause').css('display', 'none');
+                    }
+                }, 1000)
+            }
+            document.querySelector(`.arena-pause__buttons__${player}`).removeEventListener('click', playerReady)
+        }
+        document.querySelector(`.arena-pause__buttons__${player}`).addEventListener('click', playerReady);
     }
 
     pokemonTeamCardOnClick(player, pokemonCard, i, dead = false) {
@@ -45,7 +84,6 @@ export class Arena {
                     $(pokemonCard.element).remove();
                     pokemonReplacedCard = this.captainOneCard;
                     pokemonReplacedCard.appendToElement($('#bench-player-one'), 'arena__main__bench-list', i);
-                    console.log(pokemonReplacedCard)
                     // Set up new click
                     this.pokemonTeamCardOnClick(player, pokemonReplacedCard, i, pokemonReplacedCard.pokemon.dead);
 

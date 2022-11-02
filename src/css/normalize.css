@@ -24,6 +24,7 @@ html {
 
 body {
   margin: 0;
+  user-select: none;
 }
 
 /**
@@ -414,6 +415,6 @@ template {
   --quaternaryDark: #695500;
   --quaternaryDarkest: #3E3200;
 
-  --playerOne: #6041ce;
-  --playerTwo: #9b1d1d;
+  --playerOne: 96, 65, 206;
+  --playerTwo: 155, 29, 29;
 }

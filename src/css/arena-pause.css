@@ -1,0 +1,160 @@
+.arena-pause {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.514);
+    visibility: hidden;
+}
+
+.arena-pause__buttons__countdown {
+    position: absolute;
+    font-size: 6rem;
+    color: white;
+}
+
+.arena-pause-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 50vh;
+    background: rgb(0, 0, 20, 0.95);
+    box-shadow: inset 0 0 10px rgb(255, 255, 255, 0.8);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.arena-pause__title {
+    color: rgb(235, 220, 18);
+    height: 10%;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 0 0 5px white, 0 0 5px blueviolet, 0 0 5px blue;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(48, 48, 48);
+}
+
+.arena-pause__buttons {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.arena-pause__buttons__player-one, .arena-pause__buttons__player-two {
+    position: relative;
+    cursor: pointer;
+}
+
+.arena-pause__buttons__player-one__button-ready {
+    position: absolute;
+    left: -8%;
+    top: -22%;
+    transform: rotate(-23deg);
+    font-size: 6.3rem;
+    color: yellow;
+    font-weight: 500;
+    z-index: 10;
+    text-shadow: 0 0 40px #000, 0 0 10px #fff, 0 0 20px #fff, 0 0 10px yellow, 0 0 30px #fff, 0 0 40px yellow;
+}
+
+.arena-pause__buttons__player-two__button-ready {
+    position: absolute;
+    left: -8%;
+    top: -22%;
+    transform: rotate(-23deg);
+    font-size: 6.3rem;
+    color: yellow;
+    font-weight: 500;
+    z-index: 10;
+    text-shadow: 0 0 40px #000, 0 0 10px #fff, 0 0 20px #fff, 0 0 10px yellow, 0 0 30px #fff, 0 0 40px yellow;
+}
+
+.arena-pause__buttons__player-one__button {
+    transition: 0.25s;
+    background-color: rgb(var(--playerOne));
+    box-shadow: 0 0 40px rgb(var(--playerOne), 0.5), inset 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.arena-pause__buttons__player-two__button {
+    transition: 0.25s;
+    background-color: rgb(var(--playerTwo));
+    box-shadow: 0 0 40px rgb(var(--playerTwo), 0.5), inset 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.arena-pause__buttons__player-one__button-text, .arena-pause__buttons__player-two__button-text {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.arena-pause .button {
+    display: grid;
+    place-content: center;
+    box-sizing: content-box;
+    border: 4px solid #333;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    transition: all .1s ease-in;
+    width: 200px;
+    height: 100px;
+}
+
+.arena-pause__buttons__player-one:hover:not(.ready) .arena-pause__buttons__player-one__button {
+    box-shadow: 0 0 50px rgb(var(--playerOne), 0.8), inset 0 0 50px rgba(255, 255, 255, 0.4);
+}
+
+.arena-pause__buttons__player-two:hover:not(.ready) .arena-pause__buttons__player-two__button {
+    box-shadow: 0 0 50px rgb(var(--playerTwo), 0.8), inset 0 0 50px rgba(255, 255, 255, 0.4);
+}
+
+.arena-pause__buttons__player-one:active, .arena-pause__buttons__player-one.ready,
+.arena-pause__buttons__player-two:active, .arena-pause__buttons__player-two.ready {
+    top: .3rem;
+}
+
+.arena-pause__buttons__player-one:active .arena-pause__buttons__player-one__button,
+.arena-pause__buttons__player-one.ready .arena-pause__buttons__player-one__button,
+.arena-pause__buttons__player-two:active .arena-pause__buttons__player-two__button,
+.arena-pause__buttons__player-two.ready .arena-pause__buttons__player-two__button {
+    filter: brightness(0.6);
+}
+
+.arena-pause__buttons__player-one__button:active, .arena-pause__buttons__player-one__button.ready {
+    box-shadow: 0 0 40px rgb(var(--playerOne), 0.5), inset 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.arena-pause__buttons__player-two:active, .arena-pause__buttons__player-two.ready {
+    box-shadow: 0 0 40px rgb(var(--playerTwo), 0.5), inset 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.arena-pause__buttons__player-one:active .arena-pause__buttons__player-one__button-ready {}
+
+.arena-pause__buttons__player-one:active:after, .arena-pause__buttons__player-one.ready:after,
+.arena-pause__buttons__player-two:active:after, .arena-pause__buttons__player-two.ready:after {
+    border-top-width: .4rem;
+    bottom: -1.15rem;
+}
+
+.arena-pause .button:after {
+    content: '';
+    height: 0;
+    border: .5rem solid transparent;
+    border-top-color: #333;
+    position: absolute;
+    left: -.25rem;
+    right: -.2rem;
+    bottom: -1.25rem;
+    display: inline-block;
+    /* width: calc(107%); */
+}
