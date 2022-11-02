@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 export class BaseElement {
 
     constructor() {

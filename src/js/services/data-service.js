@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { pokemonData } from "../pokemon-data";
 import { Pokemon } from "../classes/pokemon";
 import { PokemonCard } from "../ui/pokemon-card";

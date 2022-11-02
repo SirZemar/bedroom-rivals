@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { Anima } from '../animations/animations';
 import { Animations } from '../animations/animations-temp';
 import { Pokedex } from './pokedex';

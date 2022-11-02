@@ -1,4 +1,3 @@
-import $, { speed } from 'jquery';
 import Keyframes from '@keyframes/core';
 import { Anima } from './animations';
 import { Arena } from '../classes/arena';

@@ -20,6 +20,6 @@
   "dependencies": {
     "@keyframes/core": "^2.0.10",
     "animejs": "^3.2.1",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.1"
   }
 }

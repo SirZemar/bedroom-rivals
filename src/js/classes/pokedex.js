@@ -1,4 +1,3 @@
-import $, { event } from 'jquery';
 import { Pokemon } from './pokemon';
 import { pokemonImagesArray } from "../images/pokemon-images";
 import { PokemonCard } from "../ui/pokemon-card";

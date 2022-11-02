@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from './jquery';
 import { DataService } from './services/data-service';
 import { Pokedex } from './classes/pokedex';
 import { pokedexData } from './pokemon-data';
