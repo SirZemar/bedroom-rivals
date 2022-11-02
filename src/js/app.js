@@ -1,11 +1,11 @@
 // import $ from './jquery';
-import { DataService } from './services/data-service';
-import { Pokedex } from './classes/pokedex';
-import { pokedexData } from './pokemon-data';
-import { Arena } from './classes/arena';
-import { GameOpening } from './ui/game-opening';
-import { ArenaPause } from './ui/arena-pause';
-import { Animations } from './animations/animations-temp';
+import { DataService } from './services/data-service.js';
+import { Pokedex } from './classes/pokedex.js';
+import { pokedexData } from './pokemon-data.js';
+import { Arena } from './classes/arena.js';
+import { GameOpening } from './ui/game-opening.js';
+import { ArenaPause } from './ui/arena-pause.js';
+import { Animations } from './animations/animations-temp.js';
 
 const gameOpening = new GameOpening;
 

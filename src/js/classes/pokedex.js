@@ -1,11 +1,11 @@
-import { Pokemon } from './pokemon';
-import { pokemonImagesArray } from "../images/pokemon-images";
-import { PokemonCard } from "../ui/pokemon-card";
+import { Pokemon } from './pokemon.js';
+import { pokemonImagesArray } from "../images/pokemon-images.js";
+import { PokemonCard } from "../ui/pokemon-card.js";
 import Keyframes from '@keyframes/core';
-import { Anima } from '../animations/animations';
-import { Animations } from '../animations/animations-temp';
-import { arenaLoad } from '../app';
-import { ArenaPokemonCard } from '../ui/arena-pokemon-card';
+import { Anima } from '../animations/animations.js';
+import { Animations } from '../animations/animations-temp.js';
+import { arenaLoad } from '../app.js';
+import { ArenaPokemonCard } from '../ui/arena-pokemon-card.js';
 import { set } from 'animejs';
 
 export class Pokedex {

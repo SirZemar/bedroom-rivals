@@ -1,6 +1,6 @@
 import Keyframes from '@keyframes/core';
-import { Anima } from './animations';
-import { Arena } from '../classes/arena';
+import { Anima } from './animations.js';
+import { Arena } from '../classes/arena.js';
 
 export class Animations {
     constructor(gridEl, pokedexListEl, pokedexTeamListEl, pokedexPlayerTitleEl, pokedexPlayerHeaderAnimation) {

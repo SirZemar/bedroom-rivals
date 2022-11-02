@@ -1,8 +1,8 @@
-import { pokemonData } from "../pokemon-data";
-import { Pokemon } from "../classes/pokemon";
-import { PokemonCard } from "../ui/pokemon-card";
+import { pokemonData } from "../pokemon-data.js";
+import { Pokemon } from "../classes/pokemon.js";
+import { PokemonCard } from "../ui/pokemon-card.js";
 import Keyframes from '@keyframes/core';
-import { Animations } from '../animations/animations';
+import { Animations } from '../animations/animations.js';
 
 export class DataService {
 

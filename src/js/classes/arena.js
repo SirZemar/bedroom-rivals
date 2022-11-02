@@ -1,10 +1,10 @@
-import { Anima } from '../animations/animations';
-import { Animations } from '../animations/animations-temp';
-import { Pokedex } from './pokedex';
-import { PokemonCard } from '../ui/pokemon-card';
-import { Pokemon } from './pokemon';
-import { itemsImages } from '../images/items';
-import { Anime } from '../animations/animejs';
+import { Anima } from '../animations/animations.js';
+import { Animations } from '../animations/animations-temp.js';
+import { Pokedex } from './pokedex.js';
+import { PokemonCard } from '../ui/pokemon-card.js';
+import { Pokemon } from './pokemon.js';
+import { itemsImages } from '../images/items.js';
+import { Anime } from '../animations/animejs.js';
 
 export class Arena {
 

@@ -1,6 +1,6 @@
-import { BaseElement } from "./base-element";
-import { statsIcons } from "../images/stats-icons";
-import { pokemonTypes } from "../images/pokemon-type";
+import { BaseElement } from "./base-element.js";
+import { statsIcons } from "../images/stats-icons.js";
+import { pokemonTypes } from "../images/pokemon-type.js";
 
 export class PokemonCard extends BaseElement {
 

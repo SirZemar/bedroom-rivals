@@ -1,5 +1,5 @@
 import anime from 'animejs/lib/anime.es.js';
-import { Arena } from '../classes/arena';
+import { Arena } from '../classes/arena.js';
 
 export class Anime {
     constructor() {

@@ -1,6 +1,6 @@
-import { BaseElement } from "./base-element";
-import { pokemonTypes } from "../images/pokemon-type";
-import { Arena } from "../classes/arena";
+import { BaseElement } from "./base-element.js";
+import { pokemonTypes } from "../images/pokemon-type.js";
+import { Arena } from "../classes/arena.js";
 
 
 export class ArenaPokemonCard extends BaseElement {

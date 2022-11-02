@@ -1,5 +1,5 @@
-import { BaseElement } from "./base-element";
-import { logoTitlesImages } from '../images/opening';
+import { BaseElement } from "./base-element.js";
+import { logoTitlesImages } from '../images/opening.js';
 
 export class GameOpening extends BaseElement {
     constructor() {
