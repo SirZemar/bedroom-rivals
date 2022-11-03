@@ -1,0 +1,78 @@
+{
+  "name": "@keyframes/core",
+  "version": "2.0.10",
+  "description": "Keyframes allows dynamic generation of CSS3 keyframes with callback events and other niceness.",
+  "main": "dist/keyframes.js",
+  "scripts": {
+    "prepare": "npm run buildMain",
+    "start": "concurrently \"node scripts/live-server.js\" \"npm-watch\"",
+    "build": "npm run buildExample && npm run buildMain",
+    "buildMain": "bash scripts/build.sh",
+    "buildExample": "bash scripts/buildExample.sh",
+    "test": "mocha",
+    "debug": "npm run buildMain && mocha --inspect-brk --watch",
+    "lint": "eslint --fix . --ext ts",
+    "docs": "typedoc --mode file --out docs src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Keyframes/Keyframes.git"
+  },
+  "keywords": [
+    "animation",
+    "keyframes",
+    "css3",
+    "html5"
+  ],
+  "author": "krazyjakee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Keyframes/Keyframes/issues"
+  },
+  "homepage": "https://github.com/Keyframes/Keyframes",
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "browserify": "^16.5.0",
+    "concurrently": "^5.0.1",
+    "eslint": "^6.6.0",
+    "live-server": "^1.2.1",
+    "livereload": "^0.9.1",
+    "mocha": "^6.2.2",
+    "mocha-jsdom": "^2.0.0",
+    "puppeteer": "^2.0.0",
+    "simple-headless-chrome": "^4.3.10",
+    "tsify": "^4.0.1",
+    "typedoc": "^0.15.2",
+    "typescript": "^3.7.2",
+    "uglify-js": "^3.6.9",
+    "zombie": "^6.1.4"
+  },
+  "dependencies": {
+    "add-px-to-style": "^1.0.0",
+    "hyphenate-style-name": "^1.0.3",
+    "npm-watch": "^0.6.0"
+  },
+  "mocha": {
+    "file": "test/bootstrap.js",
+    "recursive": "test"
+  },
+  "watch": {
+    "buildExample": {
+      "patterns": [
+        "example"
+      ],
+      "extensions": "ts",
+      "quiet": false
+    },
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "ts",
+      "quiet": false
+    }
+  }
+}

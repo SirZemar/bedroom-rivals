@@ -1,7 +1,6 @@
 import { Pokemon } from './pokemon.js';
 import { pokemonImagesArray } from "../images/pokemon-images.js";
 import { PokemonCard } from "../ui/pokemon-card.js";
-import Keyframes from '@keyframes/core';
 import { Anima } from '../animations/animations.js';
 import { Animations } from '../animations/animations-temp.js';
 import { arenaLoad } from '../app.js';
