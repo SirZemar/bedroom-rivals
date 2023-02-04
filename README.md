@@ -1,4 +1,4 @@
-<h1> Pokemon: Bedroom Rivals (Incomplete) </h1>
+<h1> Pokemon: Bedroom Rivals </h1>
 <h3> Vanilla JavaScript OOP game </h2>
 
 ![Pokemon_ Bedroom Rivals](https://user-images.githubusercontent.com/87383586/216741627-6ec113f0-b5cd-4892-9010-36fef427c3d8.png)
