@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["dom", "esnext"],
+    "declaration": false,
+    "outDir": "diste",
+    "strict": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

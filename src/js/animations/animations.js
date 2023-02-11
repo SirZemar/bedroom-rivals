@@ -1,4 +1,4 @@
-import Keyframes from '@keyframes/core';
+import Keyframes from '../../dependencies/@keyframes/core/diste/keyframes.js';
 
 // Pokedex grid animation after "Next" button click
 
