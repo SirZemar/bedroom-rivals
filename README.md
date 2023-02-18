@@ -10,4 +10,4 @@
 <p><description>For my second project I decided to tackle on more advance and modern features of JavaScript. Here everything is modular and class based.</description></p>
 
 <hr>
-Access this project <a href="https://magnificent-pudding-b339db.netlify.app" target="_blank">Here</a>
+Access this project <a href=https://magnificent-pudding-b339db.netlify.app" target="_blank" website="<website>https://magnificent-pudding-b339db.netlify.app</website>" >Here</a>
