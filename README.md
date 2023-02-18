@@ -1,6 +1,6 @@
 <h1><name>Pokemon: Bedroom Rivals</name></h1>
 
-![<logo>https://user-images.githubusercontent.com/87383586/219822897-a912ff90-d3b9-45a6-9b64-9e540bb6f91f.png</logo>](https://user-images.githubusercontent.com/87383586/219822897-a912ff90-d3b9-45a6-9b64-9e540bb6f91f.png)
+![<logo>https://user-images.githubusercontent.com/87383586/219823075-ad982617-69d0-4a42-9b3b-c0f83339cb86.png</logo>](https://user-images.githubusercontent.com/87383586/219823075-ad982617-69d0-4a42-9b3b-c0f83339cb86.png)
 
 <h3> Vanilla JavaScript OOP game </h2>
 
